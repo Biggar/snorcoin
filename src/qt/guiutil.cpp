@@ -127,7 +127,7 @@ bool parseSnorcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!SnorcoinUnits::parse(SnorcoinUnits::BTC, i->second, &rv.amount))
+                if(!SnorcoinUnits::parse(SnorcoinUnits::SNC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -166,7 +166,7 @@ QString formatSnorcoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(SnorcoinUnits::format(SnorcoinUnits::BTC, info.amount));
+        ret += QString("?amount=%1").arg(SnorcoinUnits::format(SnorcoinUnits::SNC, info.amount));
         paramCount++;
     }
 

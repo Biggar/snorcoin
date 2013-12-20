@@ -15,9 +15,9 @@ SnorcoinUnits::SnorcoinUnits(QObject *parent):
 QList<SnorcoinUnits::Unit> SnorcoinUnits::availableUnits()
 {
     QList<SnorcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(SNC);
+    unitlist.append(mSNC);
+    unitlist.append(uSNC);
     return unitlist;
 }
 
@@ -25,9 +25,9 @@ bool SnorcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case SNC:
+    case mSNC:
+    case uSNC:
         return true;
     default:
         return false;
@@ -38,9 +38,9 @@ QString SnorcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("μBTC");
+    case SNC: return QString("SNC");
+    case mSNC: return QString("mSNC");
+    case uSNC: return QString::fromUtf8("μSNC");
     default: return QString("???");
     }
 }
@@ -49,9 +49,9 @@ QString SnorcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Snorcoins");
-    case mBTC: return QString("Milli-Snorcoins (1 / 1,000)");
-    case uBTC: return QString("Micro-Snorcoins (1 / 1,000,000)");
+    case SNC: return QString("Snorcoins");
+    case mSNC: return QString("Milli-Snorcoins (1 / 1,000)");
+    case uSNC: return QString("Micro-Snorcoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
@@ -60,9 +60,9 @@ qint64 SnorcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case SNC:  return 100000000;
+    case mSNC: return 100000;
+    case uSNC: return 100;
     default:   return 100000000;
     }
 }
@@ -71,9 +71,9 @@ qint64 SnorcoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case BTC:  return Q_INT64_C(21000000);
-    case mBTC: return Q_INT64_C(21000000000);
-    case uBTC: return Q_INT64_C(21000000000000);
+    case SNC:  return Q_INT64_C(21000000);
+    case mSNC: return Q_INT64_C(21000000000);
+    case uSNC: return Q_INT64_C(21000000000000);
     default:   return 0;
     }
 }
@@ -82,9 +82,9 @@ int SnorcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case SNC: return 8; // 21,000,000 (# digits, without commas)
+    case mSNC: return 11; // 21,000,000,000
+    case uSNC: return 14; // 21,000,000,000,000
     default: return 0;
     }
 }
@@ -93,9 +93,9 @@ int SnorcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case SNC: return 8;
+    case mSNC: return 5;
+    case uSNC: return 2;
     default: return 0;
     }
 }

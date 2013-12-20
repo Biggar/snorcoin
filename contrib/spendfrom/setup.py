@@ -1,5 +1,5 @@
 from distutils.core import setup
-setup(name='btcspendfrom',
+setup(name='sncspendfrom',
       version='1.0',
       description='Command-line utility for snorcoin "coin control"',
       author='Gavin Andresen',

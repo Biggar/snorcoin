@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
-srcdir="$(dirname $0)"
+set -eSn
 cd "$srcdir"
 autoreconf --install --force

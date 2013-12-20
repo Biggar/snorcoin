@@ -1650,8 +1650,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 SNC</source>
+        <translation>123.456 SNC</translation>
     </message>
     <message>
         <location line="+31"/>

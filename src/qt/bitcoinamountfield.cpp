@@ -159,7 +159,7 @@ void SnorcoinAmountField::unitChanged(int idx)
     amount->setDecimals(SnorcoinUnits::decimals(currentUnit));
     amount->setMaximum(qPow(10, SnorcoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
-    if (currentUnit == SnorcoinUnits::uBTC)
+    if (currentUnit == SnorcoinUnits::uSNC)
         amount->setSingleStep(0.01);
     else
         amount->setSingleStep(0.001);
