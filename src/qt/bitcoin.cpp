@@ -200,7 +200,7 @@ int main(int argc, char *argv[])
     // as it is used to locate QSettings)
     bool isaTestNet = TestNet() || RegTest();
     QApplication::setOrganizationName("Snorcoin");
-    QApplication::setOrganizationDomain("snorcoin.org");
+    QApplication::setOrganizationDomain("bitcoin.org");
     if (isaTestNet) // Separate UI settings for testnets
         QApplication::setApplicationName("Snorcoin-Qt-testnet");
     else

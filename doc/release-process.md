@@ -119,10 +119,10 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 * create SHA256SUMS for builds, and PGP-sign it
 
-* update snorcoin.org version
+* update bitcoin.org version
   make sure all OS download links go to the right versions
   
-* update download sizes on snorcoin.org/_templates/download.html
+* update download sizes on bitcoin.org/_templates/download.html
 
 * update forum version
 
@@ -175,7 +175,7 @@ From a directory containing snorcoin source, gitian.sigs and gitian zips
 
 - Announce the release:
 
-  - Add the release to snorcoin.org: https://github.com/snorcoin/snorcoin.org/tree/master/_releases
+  - Add the release to bitcoin.org: https://github.com/snorcoin/bitcoin.org/tree/master/_releases
 
   - Release sticky on snorcointalk: https://snorcointalk.org/index.php?board=1.0
 

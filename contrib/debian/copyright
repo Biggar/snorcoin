@@ -8,7 +8,7 @@ Source: http://sourceforge.net/projects/snorcoin/files/
 Files: *
 Copyright: 2009-2012, Snorcoin Developers
 License: Expat
-Comment: The Snorcoin Developers encompasses the current developers listed on snorcoin.org,
+Comment: The Snorcoin Developers encompasses the current developers listed on bitcoin.org,
          as well as the numerous contributors to the project.
 
 Files: src/json/*

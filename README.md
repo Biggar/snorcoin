@@ -1,21 +1,23 @@
 Snorcoin Core integration/staging tree
 =====================================
 
-http://www.snorcoin.org
+http://www.snorcoin.be
 
-Copyright (c) 2009-2013 Snorcoin Core Developers
+Copyright (c) 2009-2013 Bitcoin Core Developers
 
 What is Snorcoin?
 ----------------
 
-Snorcoin is an experimental new digital currency that enables instant payments to
+Snorcoin is a clone of Bitcoin, an experimental new digital currency that enables instant payments to
 anyone, anywhere in the world. Snorcoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Snorcoin Core is the name of open source
+out collectively by the network. Bitcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Snorcoin Core software, see http://www.snorcoin.org/en/download.
+the Snorcoin Core software, see http://www.bitcoin.org/en/download.
+
+For more information on Snorcoin specifically, see http://www.snorcoin.be
 
 License
 -------
@@ -29,12 +31,12 @@ Development process
 Developers work in their own trees, then submit pull requests when they think
 their feature or bug fix is ready.
 
-If it is a simple/trivial/non-controversial change, then one of the Snorcoin
+If it is a simple/trivial/non-controversial change, then one of the Bitcoin
 development team members simply pulls it.
 
 If it is a *more complicated or potentially controversial* change, then the patch
 submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=snorcoin-development).
+[mailing list](http://sourceforge.net/mailarchive/forum.php?forum_name=bitcoin-development).
 
 The patch will be accepted if there is broad consensus that it is a good thing.
 Developers should expect to rework and resubmit patches if the code doesn't
@@ -42,8 +44,8 @@ match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or a
 controversial.
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/snorcoin/snorcoin/tags) are created
-regularly to indicate new official, stable release versions of Snorcoin.
+completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
+regularly to indicate new official, stable release versions of Bitcoin.
 
 Testing
 -------
@@ -61,11 +63,11 @@ submit new unit tests for old code. Unit tests can be compiled and run (assuming
 Every pull request is built for both Windows and Linux on a dedicated server,
 and unit and sanity tests are automatically run. The binaries produced may be
 used for manual QA testing — a link to them will appear in a comment on the
-pull request posted by [SnorcoinPullTester](https://github.com/SnorcoinPullTester). See https://github.com/TheBlueMatt/test-scripts
+pull request posted by [SnorcoinPullTester](https://github.com/BitcoinPullTester). See https://github.com/TheBlueMatt/test-scripts
 for the build/test scripts.
 
 ### Manual Quality Assurance (QA) Testing
 
 Large changes should have a test plan, and should be tested by somebody other
 than the developer who wrote the code.
-See https://github.com/snorcoin/QA/ for how to create a test plan.
+See https://github.com/Bitcoin/QA/ for how to create a test plan.
