@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin</source>
-        <translation>Bitcoin について</translation>
+        <source>About Snorcoin</source>
+        <translation>Snorcoin について</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Bitcoin&lt;/b&gt; バージョン</translation>
+        <source>&lt;b&gt;Snorcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Snorcoin&lt;/b&gt; バージョン</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin developers</source>
-        <translation>The Bitcoin developers</translation>
+        <source>The Snorcoin developers</source>
+        <translation>The Snorcoin developers</translation>
     </message>
 </context>
 <context>
@@ -121,12 +121,12 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>これらは支払いを送信するためのあなたの Bitcoin アドレスです。コインを送信する前に、常に額と受信アドレスを確認してください。</translation>
+        <source>These are your Snorcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>これらは支払いを送信するためのあなたの Snorcoin アドレスです。コインを送信する前に、常に額と受信アドレスを確認してください。</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Snorcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,8 +247,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを失ってしまったなら、&lt;b&gt;あなたの Bitcoin はすべて失われます&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SNORCOINS&lt;/b&gt;!</source>
+        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを失ってしまったなら、&lt;b&gt;あなたの Snorcoin はすべて失われます&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin は暗号化プロセスを終了するために今すぐ終了します。あなたのコンピュータがマルウェアに感染してコインを盗まれることもあるので、暗号化してもあなたのウォレットを完全に保護できないことを覚えていてください。</translation>
+        <source>Snorcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your snorcoins from being stolen by malware infecting your computer.</source>
+        <translation>Snorcoin は暗号化プロセスを終了するために今すぐ終了します。あなたのコンピュータがマルウェアに感染してコインを盗まれることもあるので、暗号化してもあなたのウォレットを完全に保護できないことを覚えていてください。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,9 +320,9 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>SnorcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+250"/>
+        <location filename="../snorcoingui.cpp" line="+250"/>
         <source>Sign &amp;message...</source>
         <translation>メッセージの署名... (&amp;m)</translation>
     </message>
@@ -363,8 +363,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>Bitcoinに関する情報を見る</translation>
+        <source>Show information about Snorcoin</source>
+        <translation>Snorcoinに関する情報を見る</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -409,13 +409,13 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="-322"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Bitcoin アドレスにコインを送る</translation>
+        <source>Send coins to a Snorcoin address</source>
+        <translation>Snorcoin アドレスにコインを送る</translation>
     </message>
     <message>
         <location line="+47"/>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Bitcoin の設定を変更する</translation>
+        <source>Modify configuration options for Snorcoin</source>
+        <translation>Snorcoin の設定を変更する</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -446,8 +446,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
         <location line="-180"/>
         <location line="+6"/>
         <location line="+513"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Snorcoin</source>
+        <translation>Snorcoin</translation>
     </message>
     <message>
         <location line="-519"/>
@@ -468,8 +468,8 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     <message>
         <location line="+28"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin</source>
-        <translation>Bitcoin について (&amp;A)</translation>
+        <source>&amp;About Snorcoin</source>
+        <translation>Snorcoin について (&amp;A)</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -489,13 +489,13 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>あなたが所有していることを証明するために、あなたの Bitcoin アドレスでメッセージに署名してください</translation>
+        <source>Sign messages with your Snorcoin addresses to prove you own them</source>
+        <translation>あなたが所有していることを証明するために、あなたの Snorcoin アドレスでメッセージに署名してください</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>指定された Bitcoin アドレスで署名されたことを確認するためにメッセージを検証します</translation>
+        <source>Verify messages to ensure they were signed with specified Snorcoin addresses</source>
+        <translation>指定された Snorcoin アドレスで署名されたことを確認するためにメッセージを検証します</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -525,7 +525,7 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     </message>
     <message>
         <location line="-177"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and snorcoin: URIs)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -551,13 +551,13 @@ MIT/X11 ソフトウェア ライセンスの下で配布されています。�
     <message>
         <location line="+106"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>Bitcoin クライアント</translation>
+        <source>Snorcoin client</source>
+        <translation>Snorcoin クライアント</translation>
     </message>
     <message numerus="yes">
         <location line="+120"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n の Bitcoin ネットワークへのアクティブな接続</numerusform></translation>
+        <source>%n active connection(s) to Snorcoin network</source>
+        <translation><numerusform>%n の Snorcoin ネットワークへのアクティブな接続</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -668,8 +668,8 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI を解析できません! これは無効な Bitcoin アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があります。
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
+        <translation>URI を解析できません! これは無効な Snorcoin アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があります。
 </translation>
     </message>
     <message>
@@ -683,9 +683,9 @@ Address: %4
         <translation>ウォレットは&lt;b&gt;暗号化されて、ロックされています&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>致命的なエラーが発生しました。Bitcoin は安全に継続することができず終了するでしょう。
+        <location filename="../snorcoin.cpp" line="+110"/>
+        <source>A fatal error occurred. Snorcoin can no longer continue safely and will quit.</source>
+        <translation>致命的なエラーが発生しました。Snorcoin は安全に継続することができず終了するでしょう。
 </translation>
     </message>
 </context>
@@ -751,8 +751,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>入力されたアドレス &quot;%1&quot; は無効な Bitcoin アドレスです。</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Snorcoin address.</source>
+        <translation>入力されたアドレス &quot;%1&quot; は無効な Snorcoin アドレスです。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -798,8 +798,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+558"/>
         <location line="+13"/>
-        <source>Bitcoin-Qt</source>
-        <translation>Bitcoin-Qt</translation>
+        <source>Snorcoin-Qt</source>
+        <translation>Snorcoin-Qt</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -851,18 +851,18 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin-Qt.</source>
-        <translation>Bitcoin-Qt へようこそ。</translation>
+        <source>Welcome to Snorcoin-Qt.</source>
+        <translation>Snorcoin-Qt へようこそ。</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin-Qt will store its data.</source>
-        <translation>プログラムが初めて起動されるので Bitcoin-Qt がデータを保存する場所を選ぶことができます。</translation>
+        <source>As this is the first time the program is launched, you can choose where Snorcoin-Qt will store its data.</source>
+        <translation>プログラムが初めて起動されるので Snorcoin-Qt がデータを保存する場所を選ぶことができます。</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin-Qt will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin-Qt はブロック チェーンのコピーをダウンロードして保存します。少なくとも %1GB のデータがこのディレクトリに保存され、時間とともに増えていきます。ウォレットもこのディレクトリに保存されます。</translation>
+        <source>Snorcoin-Qt will download and store a copy of the Snorcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Snorcoin-Qt はブロック チェーンのコピーをダウンロードして保存します。少なくとも %1GB のデータがこのディレクトリに保存され、時間とともに増えていきます。ウォレットもこのディレクトリに保存されます。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -914,13 +914,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>システムにログインした時に自動的に Bitcoin を起動します。</translation>
+        <source>Automatically start Snorcoin after logging in to the system.</source>
+        <translation>システムにログインした時に自動的に Snorcoin を起動します。</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>システムにログインした時に Bitcoin を起動 (&amp;S)</translation>
+        <source>&amp;Start Snorcoin on system login</source>
+        <translation>システムにログインした時に Snorcoin を起動 (&amp;S)</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -939,8 +939,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自動的にルーター上の Bitcoin クライアントのポートを開きます。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動します。</translation>
+        <source>Automatically open the Snorcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自動的にルーター上の Snorcoin クライアントのポートを開きます。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動します。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -949,8 +949,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Bitcoin ネットワークに SOCKS プロキシで接続します (例えば Tor で接続している時)。</translation>
+        <source>Connect to the Snorcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Snorcoin ネットワークに SOCKS プロキシで接続します (例えば Tor で接続している時)。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1024,8 +1024,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>ここでユーザインターフェースの言語を設定できます。設定を反映するには Bitcoin を再起動します。</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Snorcoin.</source>
+        <translation>ここでユーザインターフェースの言語を設定できます。設定を反映するには Snorcoin を再起動します。</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1039,8 +1039,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>最近の取引履歴で Bitcoin アドレスを表示するかしないか。</translation>
+        <source>Whether to show Snorcoin addresses in the transaction list or not.</source>
+        <translation>最近の取引履歴で Snorcoin アドレスを表示するかしないか。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1091,8 +1091,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Bitcoin.</source>
-        <translation>この設定を反映するには Bitcoin を再起動します。</translation>
+        <source>This setting will take effect after restarting Snorcoin.</source>
+        <translation>この設定を反映するには Snorcoin を再起動します。</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1110,8 +1110,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+202"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>表示された情報は古いかもしれません。接続が確立されると、あなたのウォレットは Bitcoin ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Snorcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>表示された情報は古いかもしれません。接続が確立されると、あなたのウォレットは Snorcoin ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
     </message>
     <message>
         <location line="-131"/>
@@ -1179,8 +1179,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI を解析できません! これは無効な Bitcoin アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があります。
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
+        <translation>URI を解析できません! これは無効な Snorcoin アドレスあるいや不正な形式の URI パラメーターによって引き起こされる場合があります。
 </translation>
     </message>
     <message>
@@ -1230,11 +1230,11 @@ Address: %4
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+114"/>
+        <location filename="../snorcoin.cpp" line="+114"/>
         <location line="+5"/>
         <location filename="../intro.cpp" line="-32"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Snorcoin</source>
+        <translation>Snorcoin</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -1363,8 +1363,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>有効な Bitcoin のコマンドライン オプションを見るために Bitcoin-Qt のヘルプメッセージを表示します。</translation>
+        <source>Show the Snorcoin-Qt help message to get a list with possible Snorcoin command-line options.</source>
+        <translation>有効な Snorcoin のコマンドライン オプションを見るために Snorcoin-Qt のヘルプメッセージを表示します。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1408,13 +1408,13 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Bitcoin - Debug window</source>
-        <translation>Bitcoin - デバッグ ウインドウ</translation>
+        <source>Snorcoin - Debug window</source>
+        <translation>Snorcoin - デバッグ ウインドウ</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin のコア</translation>
+        <source>Snorcoin Core</source>
+        <translation>Snorcoin のコア</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1423,8 +1423,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>現在のデータ ディレクトリから Bitcoin のデバッグ用ログファイルを開きます。ログファイルが大規模な場合には数秒かかることがあります。</translation>
+        <source>Open the Snorcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>現在のデータ ディレクトリから Snorcoin のデバッグ用ログファイルを開きます。ログファイルが大規模な場合には数秒かかることがあります。</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1433,8 +1433,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Bitcoin RPC コンソールへようこそ。</translation>
+        <source>Welcome to the Snorcoin RPC console.</source>
+        <translation>Snorcoin RPC コンソールへようこそ。</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1806,8 +1806,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Bitcoin アドレスを入力します (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Snorcoin アドレスを入力します (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1871,8 +1871,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>この Bitcoin アドレスを所有していることを証明するためにメッセージに署名</translation>
+        <source>Sign the message to prove you own this Snorcoin address</source>
+        <translation>この Snorcoin アドレスを所有していることを証明するためにメッセージに署名</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1907,8 +1907,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>指定された Bitcoin アドレスで署名されたことを保証するメッセージを検証</translation>
+        <source>Verify the message to ensure it was signed with the specified Snorcoin address</source>
+        <translation>指定された Snorcoin アドレスで署名されたことを保証するメッセージを検証</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1923,8 +1923,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Bitcoin アドレスを入力します (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Snorcoin アドレスを入力します (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1933,8 +1933,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
-        <translation>Bitcoin 署名を入力</translation>
+        <source>Enter Snorcoin signature</source>
+        <translation>Snorcoin 署名を入力</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -2007,8 +2007,8 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+23"/>
-        <source>The Bitcoin developers</source>
-        <translation>The Bitcoin developers</translation>
+        <source>The Snorcoin developers</source>
+        <translation>The Snorcoin developers</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2555,11 +2555,11 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>snorcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+102"/>
-        <source>Bitcoin version</source>
-        <translation>Bitcoin Bertsio</translation>
+        <location filename="../snorcoinstrings.cpp" line="+102"/>
+        <source>Snorcoin version</source>
+        <translation>Snorcoin Bertsio</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -2583,13 +2583,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>設定ファイルの指定 (初期値: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: snorcoin.conf)</source>
+        <translation>設定ファイルの指定 (初期値: snorcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>pid ファイルの指定 (初期値: bitcoind.pid)</translation>
+        <source>Specify pid file (default: snorcoind.pid)</source>
+        <translation>pid ファイルの指定 (初期値: snorcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2666,24 +2666,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=snorcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Snorcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, rpcpassword を設定ファイルで設定してください:
 %s
 下記のランダムなパスワードの使用を推奨します:
-rpcuser=bitcoinrpc
+rpcuser=snorcoinrpc
 rpcpassword=%s
 (このパスワードを覚える必要はありません)
 ユーザー名とパスワードが同じであってはいけません。
 もしもファイルが存在しないなら、所有者だけが読み取れる権限で作成してください。
 また、問題が通知されるように alertnotify を設定することをお勧めします;
-例えば: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com</translation>
+例えば: alertnotify=echo %%s | mail -s &quot;Snorcoin Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2702,8 +2702,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
-        <translation>データ ディレクトリ %s のロックを取得することができません。おそらく Bitcoin は実行中です。</translation>
+        <source>Cannot obtain a lock on data directory %s. Snorcoin is probably already running.</source>
+        <translation>データ ディレクトリ %s のロックを取得することができません。おそらく Snorcoin は実行中です。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2742,8 +2742,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>警告: あなたのコンピュータの日時が正しいことを確認してください! 時計が間違っていると Bitcoin は正常に動作しません。</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Snorcoin will not work properly.</source>
+        <translation>警告: あなたのコンピュータの日時が正しいことを確認してください! 時計が間違っていると Snorcoin は正常に動作しません。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2772,7 +2772,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
+        <source>Snorcoin RPC client version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2938,7 +2938,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+6"/>
-        <source>Send command to Bitcoin server</source>
+        <source>Send command to Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2953,12 +2953,12 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Bitcoin server</source>
+        <source>Start Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use snorcoin-cli):</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3053,8 +3053,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL オプション: (SSLのセットアップ手順は Bitcoin Wiki をご覧下さい)</translation>
+        <source>SSL options: (see the Snorcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL オプション: (SSLのセットアップ手順は Snorcoin Wiki をご覧下さい)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3233,13 +3233,13 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
-        <translation>wallet.dat 読み込みエラー: ウォレットは Bitcoin の最新バージョンを必要とします</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Snorcoin</source>
+        <translation>wallet.dat 読み込みエラー: ウォレットは Snorcoin の最新バージョンを必要とします</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>ウォレットが書き直される必要がありました: 完了するために Bitcoin を再起動します</translation>
+        <source>Wallet needed to be rewritten: restart Snorcoin to complete</source>
+        <translation>ウォレットが書き直される必要がありました: 完了するために Snorcoin を再起動します</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -3298,8 +3298,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="-28"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>このコンピュータの %s にバインドすることができません。おそらく Bitcoin は既に実行されています。</translation>
+        <source>Unable to bind to %s on this computer. Snorcoin is probably already running.</source>
+        <translation>このコンピュータの %s にバインドすることができません。おそらく Snorcoin は既に実行されています。</translation>
     </message>
     <message>
         <location line="+69"/>

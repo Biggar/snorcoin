@@ -1,25 +1,25 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINUNITS_H
-#define BITCOINUNITS_H
+#ifndef SNORCOINUNITS_H
+#define SNORCOINUNITS_H
 
 #include <QAbstractListModel>
 #include <QString>
 
-/** Bitcoin unit definitions. Encapsulates parsing and formatting
+/** Snorcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class BitcoinUnits: public QAbstractListModel
+class SnorcoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinUnits(QObject *parent);
+    explicit SnorcoinUnits(QObject *parent);
 
-    /** Bitcoin units.
-      @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
+    /** Snorcoin units.
+      @note Source: https://en.snorcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
@@ -68,8 +68,8 @@ public:
     ///@}
 
 private:
-    QList<BitcoinUnits::Unit> unitlist;
+    QList<SnorcoinUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitcoinUnit;
+typedef SnorcoinUnits::Unit SnorcoinUnit;
 
-#endif // BITCOINUNITS_H
+#endif // SNORCOINUNITS_H

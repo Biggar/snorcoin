@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin</source>
-        <translation>Om Bitcoin</translation>
+        <source>About Snorcoin</source>
+        <translation>Om Snorcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Bitcoin&lt;/b&gt; versjon</translation>
+        <source>&lt;b&gt;Snorcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Snorcoin&lt;/b&gt; versjon</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin developers</source>
-        <translation>Bitcoin utviklerne</translation>
+        <source>The Snorcoin developers</source>
+        <translation>Snorcoin utviklerne</translation>
     </message>
 </context>
 <context>
@@ -121,12 +121,12 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Snorcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Snorcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,8 +247,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer lommeboken og mister adgangsfrasen, så vil du &lt;b&gt;MISTE ALLE DINE BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SNORCOINS&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer lommeboken og mister adgangsfrasen, så vil du &lt;b&gt;MISTE ALLE DINE SNORCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine bitcoins fra å bli stjålet om skadevare infiserer datamaskinen.</translation>
+        <source>Snorcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your snorcoins from being stolen by malware infecting your computer.</source>
+        <translation>Snorcoin vil nå lukkes for å fullføre krypteringsprosessen. Husk at kryptering av lommeboken ikke fullt ut kan beskytte dine snorcoins fra å bli stjålet om skadevare infiserer datamaskinen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,9 +320,9 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>SnorcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+250"/>
+        <location filename="../snorcoingui.cpp" line="+250"/>
         <source>Sign &amp;message...</source>
         <translation>Signer &amp;melding...</translation>
     </message>
@@ -363,8 +363,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>Vis informasjon om Bitcoin</translation>
+        <source>Show information about Snorcoin</source>
+        <translation>Vis informasjon om Snorcoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -409,13 +409,13 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-322"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Send til en Bitcoin-adresse</translation>
+        <source>Send coins to a Snorcoin address</source>
+        <translation>Send til en Snorcoin-adresse</translation>
     </message>
     <message>
         <location line="+47"/>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Endre oppsett for Bitcoin</translation>
+        <source>Modify configuration options for Snorcoin</source>
+        <translation>Endre oppsett for Snorcoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -446,8 +446,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
         <location line="-180"/>
         <location line="+6"/>
         <location line="+513"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Snorcoin</source>
+        <translation>Snorcoin</translation>
     </message>
     <message>
         <location line="-519"/>
@@ -468,8 +468,8 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     <message>
         <location line="+28"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin</source>
-        <translation>&amp;Om Bitcoin</translation>
+        <source>&amp;About Snorcoin</source>
+        <translation>&amp;Om Snorcoin</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -489,13 +489,13 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Snorcoin addresses to prove you own them</source>
         <translation>Signér en melding for å bevise at du eier denne adressen</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Bitcoin-adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Snorcoin addresses</source>
+        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Snorcoin-adresse</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -525,7 +525,7 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     </message>
     <message>
         <location line="-177"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and snorcoin: URIs)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -551,13 +551,13 @@ Dette produktet inneholder programvare utviklet av OpenSSL prosjektet for bruk i
     <message>
         <location line="+106"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>Bitcoinklient</translation>
+        <source>Snorcoin client</source>
+        <translation>Snorcoinklient</translation>
     </message>
     <message numerus="yes">
         <location line="+120"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Bitcoin-nettverket</numerusform><numerusform>%n aktive forbindelser til Bitcoin-nettverket</numerusform></translation>
+        <source>%n active connection(s) to Snorcoin network</source>
+        <translation><numerusform>%n aktiv forbindelse til Snorcoin-nettverket</numerusform><numerusform>%n aktive forbindelser til Snorcoin-nettverket</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -669,8 +669,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI kunne ikke tolkes! Dette kan forårsakes av en ugyldig Bitcoin-adresse eller feil i URI-parametere.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
+        <translation>URI kunne ikke tolkes! Dette kan forårsakes av en ugyldig Snorcoin-adresse eller feil i URI-parametere.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -683,9 +683,9 @@ Adresse: %4
         <translation>Lommeboken er &lt;b&gt;kryptert&lt;/b&gt; og for tiden &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>En fatal feil har inntruffet. Det er ikke trygt å fortsette og Bitcoin må derfor avslutte.</translation>
+        <location filename="../snorcoin.cpp" line="+110"/>
+        <source>A fatal error occurred. Snorcoin can no longer continue safely and will quit.</source>
+        <translation>En fatal feil har inntruffet. Det er ikke trygt å fortsette og Snorcoin må derfor avslutte.</translation>
     </message>
 </context>
 <context>
@@ -750,8 +750,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Den angitte adressed &quot;%1&quot; er ikke en gyldig Bitcoin-adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Snorcoin address.</source>
+        <translation>Den angitte adressed &quot;%1&quot; er ikke en gyldig Snorcoin-adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -797,8 +797,8 @@ Adresse: %4
     <message>
         <location filename="../guiutil.cpp" line="+558"/>
         <location line="+13"/>
-        <source>Bitcoin-Qt</source>
-        <translation>Bitcoin-Qt</translation>
+        <source>Snorcoin-Qt</source>
+        <translation>Snorcoin-Qt</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -851,17 +851,17 @@ Adresse: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin-Qt.</source>
-        <translation>Velkommen til Bitcoin-Qt.</translation>
+        <source>Welcome to Snorcoin-Qt.</source>
+        <translation>Velkommen til Snorcoin-Qt.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin-Qt will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Snorcoin-Qt will store its data.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin-Qt will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Snorcoin-Qt will download and store a copy of the Snorcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -914,13 +914,13 @@ Adresse: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Start Bitcoin automatisk etter innlogging.</translation>
+        <source>Automatically start Snorcoin after logging in to the system.</source>
+        <translation>Start Snorcoin automatisk etter innlogging.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>&amp;Start Bitcoin ved systeminnlogging</translation>
+        <source>&amp;Start Snorcoin on system login</source>
+        <translation>&amp;Start Snorcoin ved systeminnlogging</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -939,8 +939,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åpne automatisk Bitcoin klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
+        <source>Automatically open the Snorcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åpne automatisk Snorcoin klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -949,8 +949,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Koble til Bitcoin-nettverket gjennom en SOCKS proxy (f.eks. ved tilkobling gjennom Tor).</translation>
+        <source>Connect to the Snorcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Koble til Snorcoin-nettverket gjennom en SOCKS proxy (f.eks. ved tilkobling gjennom Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1024,8 +1024,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Språket for brukergrensesnittet kan settes her. Innstillingen trer i kraft ved omstart av Bitcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Snorcoin.</source>
+        <translation>Språket for brukergrensesnittet kan settes her. Innstillingen trer i kraft ved omstart av Snorcoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1035,12 +1035,12 @@ Adresse: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av bitcoins.</translation>
+        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av snorcoins.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>Om Bitcoin-adresser skal vises i transaksjonslisten eller ikke.</translation>
+        <source>Whether to show Snorcoin addresses in the transaction list or not.</source>
+        <translation>Om Snorcoin-adresser skal vises i transaksjonslisten eller ikke.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1091,8 +1091,8 @@ Adresse: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Bitcoin.</source>
-        <translation>Denne innstillingen trer i kraft etter omstart av Bitcoin.</translation>
+        <source>This setting will take effect after restarting Snorcoin.</source>
+        <translation>Denne innstillingen trer i kraft etter omstart av Snorcoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1110,8 +1110,8 @@ Adresse: %4
     <message>
         <location line="+50"/>
         <location line="+202"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Bitcoin-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Snorcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Snorcoin-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
     </message>
     <message>
         <location line="-131"/>
@@ -1179,8 +1179,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI kunne ikke tolkes! Dette kan forårsakes av en ugyldig Bitcoin-adresse eller feil i URI-parametere.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
+        <translation>URI kunne ikke tolkes! Dette kan forårsakes av en ugyldig Snorcoin-adresse eller feil i URI-parametere.</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -1229,11 +1229,11 @@ Adresse: %4
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+114"/>
+        <location filename="../snorcoin.cpp" line="+114"/>
         <location line="+5"/>
         <location filename="../intro.cpp" line="-32"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Snorcoin</source>
+        <translation>Snorcoin</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -1362,8 +1362,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>Vis Bitcoin-Qt hjelpemelding for å få en liste med mulige kommandolinjevalg.</translation>
+        <source>Show the Snorcoin-Qt help message to get a list with possible Snorcoin command-line options.</source>
+        <translation>Vis Snorcoin-Qt hjelpemelding for å få en liste med mulige kommandolinjevalg.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1407,13 +1407,13 @@ Adresse: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Bitcoin - Debug window</source>
-        <translation>Bitcoin - vindu for feilsøk</translation>
+        <source>Snorcoin - Debug window</source>
+        <translation>Snorcoin - vindu for feilsøk</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Kjerne</translation>
+        <source>Snorcoin Core</source>
+        <translation>Snorcoin Kjerne</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1422,8 +1422,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Åpne Bitcoin loggfil for feilsøk fra datamappen. Dette kan ta noen sekunder for store loggfiler.</translation>
+        <source>Open the Snorcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Åpne Snorcoin loggfil for feilsøk fra datamappen. Dette kan ta noen sekunder for store loggfiler.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1432,8 +1432,8 @@ Adresse: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Velkommen til Bitcoin RPC konsoll.</translation>
+        <source>Welcome to the Snorcoin RPC console.</source>
+        <translation>Velkommen til Snorcoin RPC konsoll.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1624,7 +1624,7 @@ Adresse: %4
         <location filename="../sendcoinsdialog.cpp" line="+140"/>
         <location line="+213"/>
         <source>Send Coins</source>
-        <translation>Send Bitcoins</translation>
+        <translation>Send Snorcoins</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1669,7 +1669,7 @@ Adresse: %4
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-154"/>
         <source>Confirm send coins</source>
-        <translation>Bekreft sending av bitcoins</translation>
+        <translation>Bekreft sending av snorcoins</translation>
     </message>
     <message>
         <location line="-90"/>
@@ -1726,7 +1726,7 @@ Adresse: %4
     <message>
         <location line="+20"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Feil: Transaksjonen ble avvist. Dette kan skje om noe av beløpet allerede var brukt, f.eks. hvis du kopierte wallet.dat og noen bitcoins ble brukt i kopien men ikke ble markert som brukt her.</translation>
+        <translation>Feil: Transaksjonen ble avvist. Dette kan skje om noe av beløpet allerede var brukt, f.eks. hvis du kopierte wallet.dat og noen snorcoins ble brukt i kopien men ikke ble markert som brukt her.</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -1805,8 +1805,8 @@ Adresse: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Skriv inn en Bitcoin adresse (f.eks. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Skriv inn en Snorcoin adresse (f.eks. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1870,8 +1870,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Signer meldingen for å bevise at du eier denne Bitcoin-adressen</translation>
+        <source>Sign the message to prove you own this Snorcoin address</source>
+        <translation>Signer meldingen for å bevise at du eier denne Snorcoin-adressen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1906,8 +1906,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Bitcoin-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Snorcoin address</source>
+        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Snorcoin-adressen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1922,8 +1922,8 @@ Adresse: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Skriv inn en Bitcoin adresse (f.eks. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Skriv inn en Snorcoin adresse (f.eks. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1932,8 +1932,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
-        <translation>Angi Bitcoin signatur</translation>
+        <source>Enter Snorcoin signature</source>
+        <translation>Angi Snorcoin signatur</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -2006,8 +2006,8 @@ Adresse: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+23"/>
-        <source>The Bitcoin developers</source>
-        <translation>Bitcoin utviklerne</translation>
+        <source>The Snorcoin developers</source>
+        <translation>Snorcoin utviklerne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2507,7 +2507,7 @@ Adresse: %4
     <message>
         <location filename="../walletmodel.cpp" line="+218"/>
         <source>Send Coins</source>
-        <translation>Send Bitcoins</translation>
+        <translation>Send Snorcoins</translation>
     </message>
 </context>
 <context>
@@ -2554,11 +2554,11 @@ Adresse: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>snorcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+102"/>
-        <source>Bitcoin version</source>
-        <translation>Bitcoin versjon</translation>
+        <location filename="../snorcoinstrings.cpp" line="+102"/>
+        <source>Snorcoin version</source>
+        <translation>Snorcoin versjon</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -2582,13 +2582,13 @@ Adresse: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Angi konfigurasjonsfil (standardverdi: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: snorcoin.conf)</source>
+        <translation>Angi konfigurasjonsfil (standardverdi: snorcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Angi pid-fil (standardverdi: bitcoind.pid)</translation>
+        <source>Specify pid file (default: snorcoind.pid)</source>
+        <translation>Angi pid-fil (standardverdi: snorcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2665,24 +2665,24 @@ Adresse: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=snorcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Snorcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, du må angi rpcpassord i konfigurasjonsfilen.
 %s
 Det anbefales at du bruker det følgende tilfeldige passordet:
-rpcbruker=bitcoinrpc
+rpcbruker=snorcoinrpc
 rpcpassord=%s
 (du behøver ikke å huske passordet)
 Brukernavnet og passordet MÅ IKKE være like.
 Om filen ikke eksisterer, opprett den nå med eier-kun-les filrettigheter.
 Det er også anbefalt at å sette varselsmelding slik du får melding om problemer.
-For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@foo.com</translation>
+For eksempel: varselmelding=echo %%s | mail -s &quot;Snorcoin varsel&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2701,8 +2701,8 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
-        <translation>Kan ikke skaffe lås på denne datamappen %s. Bitcoin kjører sansynlig alerede.</translation>
+        <source>Cannot obtain a lock on data directory %s. Snorcoin is probably already running.</source>
+        <translation>Kan ikke skaffe lås på denne datamappen %s. Snorcoin kjører sansynlig alerede.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2741,8 +2741,8 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>Advarsel: Vennligst undersøk at din datamaskin har riktig dato og klokkeslett! Hvis klokken er stilt feil vil ikke Bitcoin fungere riktig.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Snorcoin will not work properly.</source>
+        <translation>Advarsel: Vennligst undersøk at din datamaskin har riktig dato og klokkeslett! Hvis klokken er stilt feil vil ikke Snorcoin fungere riktig.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2771,7 +2771,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
+        <source>Snorcoin RPC client version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2882,7 +2882,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Feil ved skriving av bitcoin database</translation>
+        <translation>Feil ved skriving av snorcoin database</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2902,7 +2902,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Generér bitcoins (standardverdi: 0)</translation>
+        <translation>Generér snorcoins (standardverdi: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2936,7 +2936,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+6"/>
-        <source>Send command to Bitcoin server</source>
+        <source>Send command to Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2951,12 +2951,12 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Bitcoin server</source>
+        <source>Start Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use snorcoin-cli):</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3051,8 +3051,8 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL valg: (se Bitcoin Wiki for instruksjoner for oppsett av SSL)</translation>
+        <source>SSL options: (see the Snorcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL valg: (se Snorcoin Wiki for instruksjoner for oppsett av SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3231,13 +3231,13 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
-        <translation>Feil ved lasting av wallet.dat: Lommeboken krever en nyere versjon av Bitcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Snorcoin</source>
+        <translation>Feil ved lasting av wallet.dat: Lommeboken krever en nyere versjon av Snorcoin</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>Lommeboken måtte skrives om: start Bitcoin på nytt for å fullføre</translation>
+        <source>Wallet needed to be rewritten: restart Snorcoin to complete</source>
+        <translation>Lommeboken måtte skrives om: start Snorcoin på nytt for å fullføre</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -3296,8 +3296,8 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;Bitcoin varsel&quot; admin@
     </message>
     <message>
         <location line="-28"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>Kan ikke binde til %s på denne datamaskinen. Sannsynligvis kjører Bitcoin allerede.</translation>
+        <source>Unable to bind to %s on this computer. Snorcoin is probably already running.</source>
+        <translation>Kan ikke binde til %s på denne datamaskinen. Sannsynligvis kjører Snorcoin allerede.</translation>
     </message>
     <message>
         <location line="+69"/>

@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin</source>
-        <translation>A propos de Bitcoin</translation>
+        <source>About Snorcoin</source>
+        <translation>A propos de Snorcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Bitcoin&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Snorcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Snorcoin&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,7 +33,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin developers</source>
+        <source>The Snorcoin developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -121,12 +121,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Snorcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Snorcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,7 +247,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SNORCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -274,7 +274,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Snorcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your snorcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -320,9 +320,9 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>SnorcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+250"/>
+        <location filename="../snorcoingui.cpp" line="+250"/>
         <source>Sign &amp;message...</source>
         <translation type="unfinished"/>
     </message>
@@ -363,7 +363,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
+        <source>Show information about Snorcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -409,12 +409,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-322"/>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Snorcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+47"/>
-        <source>Modify configuration options for Bitcoin</source>
+        <source>Modify configuration options for Snorcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -446,7 +446,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
         <location line="-180"/>
         <location line="+6"/>
         <location line="+513"/>
-        <source>Bitcoin</source>
+        <source>Snorcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -468,8 +468,8 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     <message>
         <location line="+28"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin</source>
-        <translation>&amp;A propos de Bitcoin</translation>
+        <source>&amp;About Snorcoin</source>
+        <translation>&amp;A propos de Snorcoin</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -489,12 +489,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Snorcoin addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Snorcoin addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -525,7 +525,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="-177"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and snorcoin: URIs)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -551,12 +551,12 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     <message>
         <location line="+106"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
+        <source>Snorcoin client</source>
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+120"/>
-        <source>%n active connection(s) to Bitcoin network</source>
+        <source>%n active connection(s) to Snorcoin network</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
@@ -665,7 +665,7 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -679,8 +679,8 @@ Address: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+110"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
+        <location filename="../snorcoin.cpp" line="+110"/>
+        <source>A fatal error occurred. Snorcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -746,7 +746,7 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Snorcoin address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -793,7 +793,7 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+558"/>
         <location line="+13"/>
-        <source>Bitcoin-Qt</source>
+        <source>Snorcoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -846,17 +846,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin-Qt.</source>
+        <source>Welcome to Snorcoin-Qt.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin-Qt will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Snorcoin-Qt will store its data.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin-Qt will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Snorcoin-Qt will download and store a copy of the Snorcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -909,12 +909,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
+        <source>Automatically start Snorcoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
+        <source>&amp;Start Snorcoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -934,7 +934,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Snorcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -944,7 +944,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the Snorcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1019,7 +1019,7 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Snorcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1034,7 +1034,7 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
+        <source>Whether to show Snorcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1086,7 +1086,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Bitcoin.</source>
+        <source>This setting will take effect after restarting Snorcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1105,7 +1105,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+202"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Snorcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1174,7 +1174,7 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Snorcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1224,10 +1224,10 @@ Address: %4
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../bitcoin.cpp" line="+114"/>
+        <location filename="../snorcoin.cpp" line="+114"/>
         <location line="+5"/>
         <location filename="../intro.cpp" line="-32"/>
-        <source>Bitcoin</source>
+        <source>Snorcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1357,7 +1357,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
+        <source>Show the Snorcoin-Qt help message to get a list with possible Snorcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1402,12 +1402,12 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Bitcoin - Debug window</source>
+        <source>Snorcoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Bitcoin Core</source>
+        <source>Snorcoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1417,7 +1417,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Snorcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1427,7 +1427,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
+        <source>Welcome to the Snorcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1800,7 +1800,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1865,7 +1865,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Snorcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1901,7 +1901,7 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Snorcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1917,7 +1917,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1927,7 +1927,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
+        <source>Enter Snorcoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2001,7 +2001,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+23"/>
-        <source>The Bitcoin developers</source>
+        <source>The Snorcoin developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2549,10 +2549,10 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>snorcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+102"/>
-        <source>Bitcoin version</source>
+        <location filename="../snorcoinstrings.cpp" line="+102"/>
+        <source>Snorcoin version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2577,12 +2577,12 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
+        <source>Specify configuration file (default: snorcoin.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
+        <source>Specify pid file (default: snorcoind.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2660,13 +2660,13 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=snorcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Snorcoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2687,7 +2687,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Snorcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2727,7 +2727,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Snorcoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2757,7 +2757,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
+        <source>Snorcoin RPC client version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2922,7 +2922,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+6"/>
-        <source>Send command to Bitcoin server</source>
+        <source>Send command to Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2937,12 +2937,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Bitcoin server</source>
+        <source>Start Snorcoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use snorcoin-cli):</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3037,7 +3037,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the Snorcoin Wiki for SSL setup instructions)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3217,12 +3217,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Snorcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
+        <source>Wallet needed to be rewritten: restart Snorcoin to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3282,7 +3282,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-28"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Snorcoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

@@ -5,21 +5,21 @@ AM_CPPFLAGS =  $(INCLUDES) \
   $(BOOST_INCLUDES)
 AM_LDFLAGS = $(PTHREAD_CFLAGS)
 
-LIBBITCOIN_SERVER=$(top_builddir)/src/libbitcoin_server.a
-LIBBITCOIN_WALLET=$(top_builddir)/src/libbitcoin_wallet.a
-LIBBITCOIN_COMMON=$(top_builddir)/src/libbitcoin_common.a
-LIBBITCOIN_CLI=$(top_builddir)/src/libbitcoin_cli.a
+LIBSNORCOIN_SERVER=$(top_builddir)/src/libsnorcoin_server.a
+LIBSNORCOIN_WALLET=$(top_builddir)/src/libsnorcoin_wallet.a
+LIBSNORCOIN_COMMON=$(top_builddir)/src/libsnorcoin_common.a
+LIBSNORCOIN_CLI=$(top_builddir)/src/libsnorcoin_cli.a
 LIBLEVELDB=$(top_builddir)/src/leveldb/libleveldb.a
 LIBMEMENV=$(top_builddir)/src/leveldb/libmemenv.a
-LIBBITCOINQT=$(top_builddir)/src/qt/libbitcoinqt.a
+LIBSNORCOINQT=$(top_builddir)/src/qt/libsnorcoinqt.a
 
-$(LIBBITCOIN):
+$(LIBSNORCOIN):
 	$(MAKE) -C $(top_builddir)/src $(@F)
 
 $(LIBLEVELDB) $(LIBMEMENV):
 	$(MAKE) -C $(top_builddir)/src leveldb/$(@F)
 
-$(LIBBITCOINQT):
+$(LIBSNORCOINQT):
 	$(MAKE) -C $(top_builddir)/src/qt $(@F)
 
 .mm.o:

@@ -1,8 +1,8 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoinaddressvalidator.h"
+#include "snorcoinaddressvalidator.h"
 
 /* Base58 characters are:
      "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
@@ -17,12 +17,12 @@
   - '0' and 'O' to 'o'
 */
 
-BitcoinAddressValidator::BitcoinAddressValidator(QObject *parent) :
+SnorcoinAddressValidator::SnorcoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State BitcoinAddressValidator::validate(QString &input, int &pos) const
+QValidator::State SnorcoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoingui.h"
+#include "snorcoingui.h"
 
 #include "aboutdialog.h"
-#include "bitcoinunits.h"
+#include "snorcoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -54,9 +54,9 @@
 #include <QUrlQuery>
 #endif
 
-const QString BitcoinGUI::DEFAULT_WALLET = "~Default";
+const QString SnorcoinGUI::DEFAULT_WALLET = "~Default";
 
-BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
+SnorcoinGUI::SnorcoinGUI(bool fIsTestnet, QWidget *parent) :
     QMainWindow(parent),
     clientModel(0),
     encryptWalletAction(0),
@@ -71,22 +71,22 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
 
     if (!fIsTestnet)
     {
-        setWindowTitle(tr("Bitcoin Core") + " - " + tr("Wallet"));
+        setWindowTitle(tr("Snorcoin Core") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
-        QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
-        setWindowIcon(QIcon(":icons/bitcoin"));
+        QApplication::setWindowIcon(QIcon(":icons/snorcoin"));
+        setWindowIcon(QIcon(":icons/snorcoin"));
 #else
-        MacDockIconHandler::instance()->setIcon(QIcon(":icons/bitcoin"));
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/snorcoin"));
 #endif
     }
     else
     {
-        setWindowTitle(tr("Bitcoin Core") + " - " + tr("Wallet") + " " + tr("[testnet]"));
+        setWindowTitle(tr("Snorcoin Core") + " - " + tr("Wallet") + " " + tr("[testnet]"));
 #ifndef Q_OS_MAC
-        QApplication::setWindowIcon(QIcon(":icons/bitcoin_testnet"));
-        setWindowIcon(QIcon(":icons/bitcoin_testnet"));
+        QApplication::setWindowIcon(QIcon(":icons/snorcoin_testnet"));
+        setWindowIcon(QIcon(":icons/snorcoin_testnet"));
 #else
-        MacDockIconHandler::instance()->setIcon(QIcon(":icons/bitcoin_testnet"));
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/snorcoin_testnet"));
 #endif
     }
 
@@ -172,7 +172,7 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
     setWalletActionsEnabled(false);
 }
 
-BitcoinGUI::~BitcoinGUI()
+SnorcoinGUI::~SnorcoinGUI()
 {
     GUIUtil::saveWindowGeometry("nWindow", this);
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
@@ -183,7 +183,7 @@ BitcoinGUI::~BitcoinGUI()
 #endif
 }
 
-void BitcoinGUI::createActions(bool fIsTestnet)
+void SnorcoinGUI::createActions(bool fIsTestnet)
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -195,14 +195,14 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Bitcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Snorcoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
     receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and bitcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and snorcoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -231,10 +231,10 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
     if (!fIsTestnet)
-        aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Bitcoin Core"), this);
+        aboutAction = new QAction(QIcon(":/icons/snorcoin"), tr("&About Snorcoin Core"), this);
     else
-        aboutAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&About Bitcoin Core"), this);
-    aboutAction->setStatusTip(tr("Show information about Bitcoin"));
+        aboutAction = new QAction(QIcon(":/icons/snorcoin_testnet"), tr("&About Snorcoin Core"), this);
+    aboutAction->setStatusTip(tr("Show information about Snorcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
@@ -244,12 +244,12 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Bitcoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for Snorcoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     if (!fIsTestnet)
-        toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
+        toggleHideAction = new QAction(QIcon(":/icons/snorcoin"), tr("&Show / Hide"), this);
     else
-        toggleHideAction = new QAction(QIcon(":/icons/bitcoin_testnet"), tr("&Show / Hide"), this);
+        toggleHideAction = new QAction(QIcon(":/icons/snorcoin_testnet"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -260,9 +260,9 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Bitcoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Snorcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Bitcoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Snorcoin addresses"));
 
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -273,7 +273,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(QApplication::style()->standardIcon(QStyle::SP_FileIcon), tr("Open URI..."), this);
-    openAction->setStatusTip(tr("Open a bitcoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a snorcoin: URI or payment request"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -290,7 +290,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     connect(openAction, SIGNAL(triggered()), this, SLOT(openClicked()));
 }
 
-void BitcoinGUI::createMenuBar()
+void SnorcoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -325,7 +325,7 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void BitcoinGUI::createToolBars()
+void SnorcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -336,7 +336,7 @@ void BitcoinGUI::createToolBars()
     overviewAction->setChecked(true);
 }
 
-void BitcoinGUI::setClientModel(ClientModel *clientModel)
+void SnorcoinGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -360,24 +360,24 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-bool BitcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool SnorcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     setWalletActionsEnabled(true);
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool BitcoinGUI::setCurrentWallet(const QString& name)
+bool SnorcoinGUI::setCurrentWallet(const QString& name)
 {
     return walletFrame->setCurrentWallet(name);
 }
 
-void BitcoinGUI::removeAllWallets()
+void SnorcoinGUI::removeAllWallets()
 {
     setWalletActionsEnabled(false);
     walletFrame->removeAllWallets();
 }
 
-void BitcoinGUI::setWalletActionsEnabled(bool enabled)
+void SnorcoinGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
     sendCoinsAction->setEnabled(enabled);
@@ -393,19 +393,19 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     openAction->setEnabled(enabled);
 }
 
-void BitcoinGUI::createTrayIcon(bool fIsTestnet)
+void SnorcoinGUI::createTrayIcon(bool fIsTestnet)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
 
     if (!fIsTestnet)
     {
-        trayIcon->setToolTip(tr("Bitcoin client"));
+        trayIcon->setToolTip(tr("Snorcoin client"));
         trayIcon->setIcon(QIcon(":/icons/toolbar"));
     }
     else
     {
-        trayIcon->setToolTip(tr("Bitcoin client") + " " + tr("[testnet]"));
+        trayIcon->setToolTip(tr("Snorcoin client") + " " + tr("[testnet]"));
         trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
     }
 
@@ -415,7 +415,7 @@ void BitcoinGUI::createTrayIcon(bool fIsTestnet)
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void BitcoinGUI::createTrayIconMenu()
+void SnorcoinGUI::createTrayIconMenu()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
@@ -453,7 +453,7 @@ void BitcoinGUI::createTrayIconMenu()
 }
 
 #ifndef Q_OS_MAC
-void BitcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void SnorcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -463,7 +463,7 @@ void BitcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void BitcoinGUI::optionsClicked()
+void SnorcoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -473,7 +473,7 @@ void BitcoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void BitcoinGUI::aboutClicked()
+void SnorcoinGUI::aboutClicked()
 {
     if(!clientModel)
         return;
@@ -483,7 +483,7 @@ void BitcoinGUI::aboutClicked()
     dlg.exec();
 }
 
-void BitcoinGUI::openClicked()
+void SnorcoinGUI::openClicked()
 {
     OpenURIDialog dlg(this);
     if(dlg.exec())
@@ -492,41 +492,41 @@ void BitcoinGUI::openClicked()
     }
 }
 
-void BitcoinGUI::gotoOverviewPage()
+void SnorcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void BitcoinGUI::gotoHistoryPage()
+void SnorcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void BitcoinGUI::gotoReceiveCoinsPage()
+void SnorcoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void BitcoinGUI::gotoSendCoinsPage(QString addr)
+void SnorcoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void BitcoinGUI::gotoSignMessageTab(QString addr)
+void SnorcoinGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void BitcoinGUI::gotoVerifyMessageTab(QString addr)
+void SnorcoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 
-void BitcoinGUI::setNumConnections(int count)
+void SnorcoinGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -538,10 +538,10 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Bitcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Snorcoin network", "", count));
 }
 
-void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
+void SnorcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 {
     // Prevent orphan statusbar messages (e.g. hover Quit in main menu, wait until chain-sync starts -> garbelled text)
     statusBar()->clearMessage();
@@ -635,9 +635,9 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     progressBar->setToolTip(tooltip);
 }
 
-void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void SnorcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Bitcoin"); // default title
+    QString strTitle = tr("Snorcoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -663,7 +663,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "Bitcoin - "
+    // Append title to "Snorcoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -695,7 +695,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void BitcoinGUI::changeEvent(QEvent *e)
+void SnorcoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -714,7 +714,7 @@ void BitcoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void BitcoinGUI::closeEvent(QCloseEvent *event)
+void SnorcoinGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -729,7 +729,7 @@ void BitcoinGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void BitcoinGUI::incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address)
+void SnorcoinGUI::incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address)
 {
     // On new transaction, make an info balloon
     message((amount)<0 ? tr("Sent transaction") : tr("Incoming transaction"),
@@ -738,19 +738,19 @@ void BitcoinGUI::incomingTransaction(const QString& date, int unit, qint64 amoun
                 "Type: %3\n"
                 "Address: %4\n")
                   .arg(date)
-                  .arg(BitcoinUnits::formatWithUnit(unit, amount, true))
+                  .arg(SnorcoinUnits::formatWithUnit(unit, amount, true))
                   .arg(type)
                   .arg(address), CClientUIInterface::MSG_INFORMATION);
 }
 
-void BitcoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void SnorcoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void BitcoinGUI::dropEvent(QDropEvent *event)
+void SnorcoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -762,7 +762,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-bool BitcoinGUI::eventFilter(QObject *object, QEvent *event)
+bool SnorcoinGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -774,7 +774,7 @@ bool BitcoinGUI::eventFilter(QObject *object, QEvent *event)
     return QMainWindow::eventFilter(object, event);
 }
 
-bool BitcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
+bool SnorcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
     // URI has to be valid
     if (walletFrame->handlePaymentRequest(recipient))
@@ -787,7 +787,7 @@ bool BitcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
         return false;
 }
 
-void BitcoinGUI::setEncryptionStatus(int status)
+void SnorcoinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
@@ -816,7 +816,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
     }
 }
 
-void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void SnorcoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -838,12 +838,12 @@ void BitcoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void BitcoinGUI::toggleHidden()
+void SnorcoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void BitcoinGUI::detectShutdown()
+void SnorcoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);

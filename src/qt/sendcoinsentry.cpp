@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -28,14 +28,14 @@ SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
 #endif
 #if QT_VERSION >= 0x040700
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
-    ui->payTo->setPlaceholderText(tr("Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
+    ui->payTo->setPlaceholderText(tr("Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
 #endif
     setFocusProxy(ui->payTo);
 
-    // normal bitcoin address field
+    // normal snorcoin address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying bitcoin address(es)
-    ui->payTo_is->setFont(GUIUtil::bitcoinAddressFont());
+    // just a label for displaying snorcoin address(es)
+    ui->payTo_is->setFont(GUIUtil::snorcoinAddressFont());
 }
 
 SendCoinsEntry::~SendCoinsEntry()

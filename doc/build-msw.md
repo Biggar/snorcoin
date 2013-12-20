@@ -72,12 +72,12 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-Bitcoin
+Snorcoin
 -------
 MSYS shell:
 
-	cd \bitcoin
+	cd \snorcoin
 	sh autogen.sh
 	sh configure
 	mingw32-make
-	strip bitcoind.exe
+	strip snorcoind.exe

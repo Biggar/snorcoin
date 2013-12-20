@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2013 The Bitcoin developers
+// Copyright (c) 2009-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "snorcoin-config.h"
 #endif
 
 #include "init.h"
@@ -111,14 +111,14 @@ void Shutdown()
     TRY_LOCK(cs_Shutdown, lockShutdown);
     if (!lockShutdown) return;
 
-    RenameThread("bitcoin-shutoff");
+    RenameThread("snorcoin-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
     ShutdownRPCMining();
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         bitdb.Flush(false);
-    GenerateBitcoins(false, NULL, 0);
+    GenerateSnorcoins(false, NULL, 0);
 #endif
     StopNode();
     UnregisterNodeSignals(GetNodeSignals());
@@ -191,10 +191,10 @@ std::string HelpMessage(HelpMessageMode hmm)
 {
     string strUsage = _("Options:") + "\n";
     strUsage += "  -?                     " + _("This help message") + "\n";
-    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: bitcoin.conf)") + "\n";
+    strUsage += "  -conf=<file>           " + _("Specify configuration file (default: snorcoin.conf)") + "\n";
     strUsage += "  -datadir=<dir>         " + _("Specify data directory") + "\n";
     strUsage += "  -testnet               " + _("Use the test network") + "\n";
-    strUsage += "  -pid=<file>            " + _("Specify pid file (default: bitcoind.pid)") + "\n";
+    strUsage += "  -pid=<file>            " + _("Specify pid file (default: snorcoind.pid)") + "\n";
     strUsage += "  -gen                   " + _("Generate coins (default: 0)") + "\n";
     strUsage += "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n";
     strUsage += "  -timeout=<n>           " + _("Specify connection timeout in milliseconds (default: 5000)") + "\n";
@@ -229,7 +229,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage +=                               _("If <category> is not supplied, output all debugging information.") + "\n";
     strUsage +=                               _("<category> can be:");
     strUsage +=                                 " addrman, alert, coindb, db, lock, rand, rpc, selectcoins, mempool, net"; // Don't translate these and qt below
-    if (hmm == HMM_BITCOIN_QT)
+    if (hmm == HMM_SNORCOIN_QT)
     {
         strUsage += ", qt.\n";
     }
@@ -246,12 +246,12 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -printtodebugger       " + _("Send trace/debug info to debugger") + "\n";
 #endif
 
-    if (hmm == HMM_BITCOIN_QT)
+    if (hmm == HMM_SNORCOIN_QT)
     {
         strUsage += "  -server                " + _("Accept command line and JSON-RPC commands") + "\n";
     }
 
-    if (hmm == HMM_BITCOIND)
+    if (hmm == HMM_SNORCOIND)
     {
 #if !defined(WIN32)
         strUsage += "  -daemon                " + _("Run in the background as a daemon and accept commands") + "\n";
@@ -287,7 +287,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -blockmaxsize=<n>      " + strprintf(_("Set maximum block size in bytes (default: %d)"), DEFAULT_BLOCK_MAX_SIZE) + "\n";
     strUsage += "  -blockprioritysize=<n> " + strprintf(_("Set maximum size of high-priority/low-fee transactions in bytes (default: %d)"), DEFAULT_BLOCK_PRIORITY_SIZE) + "\n";
 
-    strUsage += "\n" + _("SSL options: (see the Bitcoin Wiki for SSL setup instructions)") + "\n";
+    strUsage += "\n" + _("SSL options: (see the Snorcoin Wiki for SSL setup instructions)") + "\n";
     strUsage += "  -rpcssl                                  " + _("Use OpenSSL (https) for JSON-RPC connections") + "\n";
     strUsage += "  -rpcsslcertificatechainfile=<file.cert>  " + _("Server certificate file (default: server.cert)") + "\n";
     strUsage += "  -rpcsslprivatekeyfile=<file.pem>         " + _("Server private key (default: server.pem)") + "\n";
@@ -311,7 +311,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("bitcoin-loadblk");
+    RenameThread("snorcoin-loadblk");
 
     // -reindex
     if (fReindex) {
@@ -357,7 +357,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
     }
 }
 
-/** Initialize bitcoin.
+/** Initialize snorcoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
 bool AppInit2(boost::thread_group& threadGroup, bool fForceServer)
@@ -554,18 +554,18 @@ bool AppInit2(boost::thread_group& threadGroup, bool fForceServer)
     if (strWalletFile != boost::filesystem::basename(strWalletFile) + boost::filesystem::extension(strWalletFile))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s"), strWalletFile.c_str(), strDataDir.c_str()));
 #endif
-    // Make sure only a single Bitcoin process is using the data directory.
+    // Make sure only a single Snorcoin process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Bitcoin is probably already running."), strDataDir.c_str()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Snorcoin is probably already running."), strDataDir.c_str()));
 
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Bitcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    LogPrintf("Snorcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     LogPrintf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         LogPrintf("Startup time: %s\n", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()).c_str());
@@ -575,7 +575,7 @@ bool AppInit2(boost::thread_group& threadGroup, bool fForceServer)
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "Bitcoin server starting\n");
+        fprintf(stdout, "Snorcoin server starting\n");
 
     if (nScriptCheckThreads) {
         LogPrintf("Using %u threads for script verification\n", nScriptCheckThreads);
@@ -921,10 +921,10 @@ bool AppInit2(boost::thread_group& threadGroup, bool fForceServer)
                 InitWarning(msg);
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Bitcoin") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Snorcoin") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart Bitcoin to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart Snorcoin to complete") << "\n";
                 LogPrintf("%s", strErrors.str().c_str());
                 return InitError(strErrors.str());
             }
@@ -1052,7 +1052,7 @@ bool AppInit2(boost::thread_group& threadGroup, bool fForceServer)
 #ifdef ENABLE_WALLET
     // Generate coins in the background
     if (pwalletMain)
-        GenerateBitcoins(GetBoolArg("-gen", false), pwalletMain, GetArg("-genproclimit", -1));
+        GenerateSnorcoins(GetBoolArg("-gen", false), pwalletMain, GetArg("-genproclimit", -1));
 #endif
 
     // ********************************************************* Step 12: finished

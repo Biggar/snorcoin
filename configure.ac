@@ -6,13 +6,13 @@ define(_CLIENT_VERSION_REVISION, 99)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2013)
-AC_INIT([Bitcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@bitcoin.org],[bitcoin])
+AC_INIT([Snorcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@snorcoin.org],[snorcoin])
 AC_CONFIG_AUX_DIR([src/build-aux])
 AC_CONFIG_MACRO_DIR([src/m4])
 AC_CANONICAL_HOST
-AH_TOP([#ifndef BITCOIN_CONFIG_H])
-AH_TOP([#define BITCOIN_CONFIG_H])
-AH_BOTTOM([#endif //BITCOIN_CONFIG_H])
+AH_TOP([#ifndef SNORCOIN_CONFIG_H])
+AH_TOP([#define SNORCOIN_CONFIG_H])
+AH_BOTTOM([#endif //SNORCOIN_CONFIG_H])
 
 # This m4 will only be used if a system copy cannot be found. This is helpful
 # on systems where autotools are installed but the pkg-config macros are not in
@@ -69,15 +69,15 @@ AC_ARG_WITH([qt],
   [enable qt (default is yes)])],
   [use_qt=$withval],
   [use_qt=auto])
-AC_DEFUN([BITCOIN_QT_FAIL],[
+AC_DEFUN([SNORCOIN_QT_FAIL],[
   if test "x$use_qt" = "xauto"; then
-    AC_MSG_WARN([$1; bitcoin-qt frontend will not be built])
+    AC_MSG_WARN([$1; snorcoin-qt frontend will not be built])
     use_qt=no
   else
     AC_MSG_ERROR([$1])
   fi
 ])
-AC_DEFUN([BITCOIN_QT_CHECK],[
+AC_DEFUN([SNORCOIN_QT_CHECK],[
   if test "x$use_qt" != "xno"; then
     true
     $1
@@ -86,11 +86,11 @@ AC_DEFUN([BITCOIN_QT_CHECK],[
     $2
   fi
 ])
-AC_DEFUN([BITCOIN_QT_PATH_PROGS],[
-  BITCOIN_QT_CHECK([
+AC_DEFUN([SNORCOIN_QT_PATH_PROGS],[
+  SNORCOIN_QT_CHECK([
     AC_PATH_PROGS($1,$2,$3,$4)
     if test "x$$1" = "x"; then
-      BITCOIN_QT_FAIL([$1 not found])
+      SNORCOIN_QT_FAIL([$1 not found])
     fi
   ])
 ])
@@ -148,7 +148,7 @@ AC_ARG_WITH([protoc-bindir],[AS_HELP_STRING([--with-protoc-bindir=BIN_DIR],[spec
 
 
 AC_CONFIG_SRCDIR([src])
-AC_CONFIG_HEADERS([src/bitcoin-config.h])
+AC_CONFIG_HEADERS([src/snorcoin-config.h])
 
 dnl Checks for programs.
 AC_PROG_CXX
@@ -168,11 +168,11 @@ AC_PATH_PROG(LCOV, lcov)
 AC_PATH_PROG(JAVA, java)
 AC_PATH_PROG(GENHTML, genhtml)
 AC_PATH_PROG([GIT], [git])
-BITCOIN_QT_PATH_PROGS([MOC], [moc-qt4 moc4 moc],, $qt_bin_path:$PATH)
-BITCOIN_QT_PATH_PROGS([UIC], [uic-qt4 uic4 uic],, $qt_bin_path:$PATH)
-BITCOIN_QT_PATH_PROGS([RCC], [rcc-qt4 rcc4 rcc],, $qt_bin_path:$PATH)
-BITCOIN_QT_PATH_PROGS([LRELEASE], [lrelease-qt4 lrelease4 lrelease],, $qt_bin_path:$PATH)
-BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],, $protoc_bin_path:$PATH)
+SNORCOIN_QT_PATH_PROGS([MOC], [moc-qt4 moc4 moc],, $qt_bin_path:$PATH)
+SNORCOIN_QT_PATH_PROGS([UIC], [uic-qt4 uic4 uic],, $qt_bin_path:$PATH)
+SNORCOIN_QT_PATH_PROGS([RCC], [rcc-qt4 rcc4 rcc],, $qt_bin_path:$PATH)
+SNORCOIN_QT_PATH_PROGS([LRELEASE], [lrelease-qt4 lrelease4 lrelease],, $qt_bin_path:$PATH)
+SNORCOIN_QT_PATH_PROGS([PROTOC], [protoc],, $protoc_bin_path:$PATH)
 AC_PATH_PROG(CCACHE,ccache)
 AC_PATH_PROGS([LUPDATE], [lupdate-qt4 lupdate4 lupdate],, $qt_bin_path:$PATH)
 AC_PATH_PROG(XGETTEXT,xgettext)
@@ -254,7 +254,7 @@ case $host in
        fi
      fi
 
-     BITCOIN_QT_CHECK([
+     SNORCOIN_QT_CHECK([
        MOC_DEFS="-DQ_OS_MAC"
        base_frameworks="-framework Foundation -framework ApplicationServices -framework AppKit"
        AX_CHECK_LINK_FLAG([[$base_frameworks]],[LIBS="$LIBS $base_frameworks"],[AC_MSG_ERROR(could not find base frameworks)])
@@ -309,7 +309,7 @@ dnl Check for pthread compile/link requirements
 AX_PTHREAD
 INCLUDES="$INCLUDES $PTHREAD_CFLAGS"
 
-# The following macro will add the necessary defines to bitcoin-config.h, but
+# The following macro will add the necessary defines to snorcoin-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -371,7 +371,7 @@ AC_TRY_COMPILE([#include <sys/socket.h>],
 
 if test x$enable_wallet != xno; then
     dnl Check for libdb_cxx only if wallet enabled
-    BITCOIN_FIND_BDB48
+    SNORCOIN_FIND_BDB48
 fi
 
 dnl Check for libminiupnpc (optional)
@@ -465,10 +465,10 @@ if test x$use_pkgconfig = xyes; then
       PKG_CHECK_MODULES([SSL], [libssl], [INCLUDES="$INCLUDES $SSL_CFLAGS"; LIBS="$LIBS $SSL_LIBS"], [AC_MSG_ERROR(openssl  not found.)])
       PKG_CHECK_MODULES([CRYPTO], [libcrypto], [INCLUDES="$INCLUDES $CRYPTO_CFLAGS"; LIBS="$LIBS $CRYPTO_LIBS"], [AC_MSG_ERROR(libcrypto  not found.)])
 
-      BITCOIN_QT_CHECK([
+      SNORCOIN_QT_CHECK([
         PKG_CHECK_MODULES([QT], [QtCore QtGui QtNetwork], [QT_INCLUDES="$QT_CFLAGS"; have_qt=yes],[
           have_qt=no
-          BITCOIN_QT_FAIL([Qt dependencies not found])
+          SNORCOIN_QT_FAIL([Qt dependencies not found])
         ])
         if test x$use_tests = xyes; then
           PKG_CHECK_MODULES([QT_TEST], [QtTest], [QT_TEST_INCLUDES="$QT_TEST_CFLAGS"; have_qt_test=yes], [have_qt_test=no])
@@ -490,7 +490,7 @@ else
   AC_CHECK_HEADER([openssl/ssl.h],, AC_MSG_ERROR(libssl headers missing),)
   AC_CHECK_LIB([ssl],         [main],, AC_MSG_ERROR(libssl missing))
 
-  BITCOIN_QT_CHECK([
+  SNORCOIN_QT_CHECK([
     TEMP_LIBS="$LIBS"
     LIBS=
     if test x$qt_lib_path != x; then
@@ -503,25 +503,25 @@ else
     fi
 
     if test x$TARGET_OS == xwindows; then
-      AC_CHECK_LIB([imm32],      [main],, BITCOIN_QT_FAIL(libimm32 not found))
+      AC_CHECK_LIB([imm32],      [main],, SNORCOIN_QT_FAIL(libimm32 not found))
     fi
   ])
 
     #TODO: These are only needed when they're linked directly to parent libs. It really has nothing to do with windows.
     #Instead, check for missing functions in parent libs and assume static if they're absent.
     if test x$TARGET_OS == xwindows; then
-      BITCOIN_QT_CHECK(AC_CHECK_LIB([qcncodecs],[main],,BITCOIN_QT_FAIL(libqcncodecs not found)))
-      BITCOIN_QT_CHECK(AC_CHECK_LIB([qjpcodecs],[main],,BITCOIN_QT_FAIL(libqjpcodecs not found)))
-      BITCOIN_QT_CHECK(AC_CHECK_LIB([qkrcodecs],[main],,BITCOIN_QT_FAIL(libqkrcodecs not found)))
-      BITCOIN_QT_CHECK(AC_CHECK_LIB([qtwcodecs],[main],,BITCOIN_QT_FAIL(libqtwcodecs not found)))
+      SNORCOIN_QT_CHECK(AC_CHECK_LIB([qcncodecs],[main],,SNORCOIN_QT_FAIL(libqcncodecs not found)))
+      SNORCOIN_QT_CHECK(AC_CHECK_LIB([qjpcodecs],[main],,SNORCOIN_QT_FAIL(libqjpcodecs not found)))
+      SNORCOIN_QT_CHECK(AC_CHECK_LIB([qkrcodecs],[main],,SNORCOIN_QT_FAIL(libqkrcodecs not found)))
+      SNORCOIN_QT_CHECK(AC_CHECK_LIB([qtwcodecs],[main],,SNORCOIN_QT_FAIL(libqtwcodecs not found)))
     fi
 
-    BITCOIN_QT_CHECK(AC_CHECK_LIB([QtCore]   ,[main],,BITCOIN_QT_FAIL(libQtCore not found)))
-    BITCOIN_QT_CHECK(AC_CHECK_LIB([QtGui]    ,[main],,BITCOIN_QT_FAIL(libQtGui not found)))
-    BITCOIN_QT_CHECK(AC_CHECK_LIB([QtNetwork],[main],,BITCOIN_QT_FAIL(libQtNetwork not found)))
-    BITCOIN_QT_CHECK(AC_CHECK_LIB([protobuf] ,[main],,BITCOIN_QT_FAIL(libprotobuf not found)))
+    SNORCOIN_QT_CHECK(AC_CHECK_LIB([QtCore]   ,[main],,SNORCOIN_QT_FAIL(libQtCore not found)))
+    SNORCOIN_QT_CHECK(AC_CHECK_LIB([QtGui]    ,[main],,SNORCOIN_QT_FAIL(libQtGui not found)))
+    SNORCOIN_QT_CHECK(AC_CHECK_LIB([QtNetwork],[main],,SNORCOIN_QT_FAIL(libQtNetwork not found)))
+    SNORCOIN_QT_CHECK(AC_CHECK_LIB([protobuf] ,[main],,SNORCOIN_QT_FAIL(libprotobuf not found)))
 
-  BITCOIN_QT_CHECK([
+  SNORCOIN_QT_CHECK([
     QT_LIBS="$LIBS"
     LIBS="$TEMP_LIBS"
 
@@ -531,11 +531,11 @@ else
       CPPFLAGS="$CPPFLAGS $QT_INCLUDES"
     fi
   ])
-    BITCOIN_QT_CHECK([AC_CHECK_HEADER([QtPlugin],,BITCOIN_QT_FAIL(QtCore headers missing))])
-    BITCOIN_QT_CHECK([AC_CHECK_HEADER([QApplication],, BITCOIN_QT_FAIL(QtGui headers missing))])
-    BITCOIN_QT_CHECK([AC_CHECK_HEADER([QLocalSocket],, BITCOIN_QT_FAIL(QtNetwork headers missing))])
+    SNORCOIN_QT_CHECK([AC_CHECK_HEADER([QtPlugin],,SNORCOIN_QT_FAIL(QtCore headers missing))])
+    SNORCOIN_QT_CHECK([AC_CHECK_HEADER([QApplication],, SNORCOIN_QT_FAIL(QtGui headers missing))])
+    SNORCOIN_QT_CHECK([AC_CHECK_HEADER([QLocalSocket],, SNORCOIN_QT_FAIL(QtNetwork headers missing))])
 
-  BITCOIN_QT_CHECK([
+  SNORCOIN_QT_CHECK([
     if test x$use_tests = xyes; then
       TEMP_LIBS="$LIBS"
       LIBS=
@@ -664,7 +664,7 @@ fi
 
 dnl enable qt support
 AC_MSG_CHECKING([if qt should be enabled])
-BITCOIN_QT_CHECK([
+SNORCOIN_QT_CHECK([
   use_qt=yes
   BUILD_QT=qt
   if test x$use_tests = xyes; then
@@ -769,6 +769,6 @@ AC_SUBST(BUILD_QT)
 AC_SUBST(BUILD_TEST)
 AC_SUBST(BUILD_TEST_QT)
 AC_CONFIG_FILES([Makefile src/Makefile src/test/Makefile src/qt/Makefile src/qt/test/Makefile share/setup.nsi share/qt/Info.plist])
-AC_CONFIG_FILES([qa/pull-tester/run-bitcoind-for-test.sh],[chmod +x qa/pull-tester/run-bitcoind-for-test.sh])
+AC_CONFIG_FILES([qa/pull-tester/run-snorcoind-for-test.sh],[chmod +x qa/pull-tester/run-snorcoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/build-tests.sh],[chmod +x qa/pull-tester/build-tests.sh])
 AC_OUTPUT

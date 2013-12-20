@@ -16,4 +16,4 @@ FORMS += \
     ../src/qt/forms/openuridialog.ui
 
 RESOURCES += \
-    ../src/qt/bitcoin.qrc
+    ../src/qt/snorcoin.qrc

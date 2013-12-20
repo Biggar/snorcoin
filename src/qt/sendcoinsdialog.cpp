@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #include "ui_sendcoinsdialog.h"
 
 #include "addresstablemodel.h"
-#include "bitcoinunits.h"
+#include "snorcoinunits.h"
 #include "coincontroldialog.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
@@ -34,7 +34,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     ui->sendButton->setIcon(QIcon());
 #endif
 #if QT_VERSION >= 0x040700
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Snorcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)"));
 #endif
 
     addEntry();
@@ -43,7 +43,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 
     // Coin Control
-    ui->lineEditCoinControlChange->setFont(GUIUtil::bitcoinAddressFont());
+    ui->lineEditCoinControlChange->setFont(GUIUtil::snorcoinAddressFont());
     connect(ui->pushButtonCoinControl, SIGNAL(clicked()), this, SLOT(coinControlButtonClicked()));
     connect(ui->checkBoxCoinControlChange, SIGNAL(stateChanged(int)), this, SLOT(coinControlChangeChecked(int)));
     connect(ui->lineEditCoinControlChange, SIGNAL(textEdited(const QString &)), this, SLOT(coinControlChangeEdited(const QString &)));
@@ -144,7 +144,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     foreach(const SendCoinsRecipient &rcp, recipients)
     {
         // generate bold amount string
-        QString amount = "<b>" + BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), rcp.amount);
+        QString amount = "<b>" + SnorcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), rcp.amount);
         amount.append("</b>");
         // generate monospace address string
         QString address = "<span style='font-family: monospace;'>" + rcp.address;
@@ -197,7 +197,7 @@ void SendCoinsDialog::on_sendButton_clicked()
 
     // process prepareStatus and on error generate message shown to user
     processSendCoinsReturn(prepareStatus,
-        BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), currentTransaction.getTransactionFee()));
+        SnorcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), currentTransaction.getTransactionFee()));
 
     if(prepareStatus.status != WalletModel::OK) {
         fNewRecipientAllowed = true;
@@ -212,7 +212,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     {
         // append fee string if a fee is required
         questionString.append("<hr /><span style='color:#aa0000;'>");
-        questionString.append(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), txFee));
+        questionString.append(SnorcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), txFee));
         questionString.append("</span> ");
         questionString.append(tr("added as transaction fee"));
     }
@@ -221,13 +221,13 @@ void SendCoinsDialog::on_sendButton_clicked()
     questionString.append("<hr />");
     qint64 totalAmount = currentTransaction.getTotalTransactionAmount() + txFee;
     QStringList alternativeUnits;
-    foreach(BitcoinUnits::Unit u, BitcoinUnits::availableUnits())
+    foreach(SnorcoinUnits::Unit u, SnorcoinUnits::availableUnits())
     {
         if(u != model->getOptionsModel()->getDisplayUnit())
-            alternativeUnits.append(BitcoinUnits::formatWithUnit(u, totalAmount));
+            alternativeUnits.append(SnorcoinUnits::formatWithUnit(u, totalAmount));
     }
     questionString.append(tr("Total Amount %1 (= %2)")
-        .arg(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), totalAmount))
+        .arg(SnorcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), totalAmount))
         .arg(alternativeUnits.join(" " + tr("or") + " ")));
 
     QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send coins"),
@@ -390,7 +390,7 @@ bool SendCoinsDialog::handlePaymentRequest(const SendCoinsRecipient &rv)
         }
     }
     else {
-        CBitcoinAddress address(rv.address.toStdString());
+        CSnorcoinAddress address(rv.address.toStdString());
         if (!address.IsValid()) {
             emit message(strSendCoins, tr("Invalid payment address %1").arg(rv.address),
                 CClientUIInterface::MSG_WARNING);
@@ -409,7 +409,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 unconfirmedBalance, qint
 
     if(model && model->getOptionsModel())
     {
-        ui->labelBalance->setText(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), balance));
+        ui->labelBalance->setText(SnorcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), balance));
     }
 }
 
@@ -548,20 +548,20 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
 {
     if (model)
     {
-        CoinControlDialog::coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
+        CoinControlDialog::coinControl->destChange = CSnorcoinAddress(text.toStdString()).Get();
 
         // label for the change address
         ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
         if (text.isEmpty())
             ui->labelCoinControlChangeLabel->setText("");
-        else if (!CBitcoinAddress(text.toStdString()).IsValid())
+        else if (!CSnorcoinAddress(text.toStdString()).IsValid())
         {
             // invalid change address
             CoinControlDialog::coinControl->destChange = CNoDestination();
 
             ui->lineEditCoinControlChange->setValid(false);
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Bitcoin address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Snorcoin address"));
         }
         else
         {
@@ -572,7 +572,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
             {
                 CPubKey pubkey;
                 CKeyID keyid;
-                CBitcoinAddress(text.toStdString()).GetKeyID(keyid);
+                CSnorcoinAddress(text.toStdString()).GetKeyID(keyid);
                 if (model->getPubKey(keyid, pubkey))
                     ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
                 else

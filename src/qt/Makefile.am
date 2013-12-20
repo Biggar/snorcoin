@@ -5,71 +5,71 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = bitcoin-qt
-noinst_LIBRARIES = libbitcoinqt.a
+bin_PROGRAMS = snorcoin-qt
+noinst_LIBRARIES = libsnorcoinqt.a
 SUBDIRS = $(BUILD_TEST_QT)
 DIST_SUBDIRS = test
 
-# bitcoin qt core #
-QT_TS = locale/bitcoin_ach.ts \
-  locale/bitcoin_af_ZA.ts \
-  locale/bitcoin_ar.ts \
-  locale/bitcoin_be_BY.ts \
-  locale/bitcoin_bg.ts \
-  locale/bitcoin_bs.ts \
-  locale/bitcoin_ca_ES.ts \
-  locale/bitcoin_ca.ts \
-  locale/bitcoin_cs.ts \
-  locale/bitcoin_cy.ts \
-  locale/bitcoin_da.ts \
-  locale/bitcoin_de.ts \
-  locale/bitcoin_de_AT.ts \
-  locale/bitcoin_el_GR.ts \
-  locale/bitcoin_en.ts \
-  locale/bitcoin_eo.ts \
-  locale/bitcoin_es_CL.ts \
-  locale/bitcoin_es.ts \
-  locale/bitcoin_et.ts \
-  locale/bitcoin_eu_ES.ts \
-  locale/bitcoin_fa_IR.ts \
-  locale/bitcoin_fa.ts \
-  locale/bitcoin_fi.ts \
-  locale/bitcoin_fr_CA.ts \
-  locale/bitcoin_fr.ts \
-  locale/bitcoin_gl.ts \
-  locale/bitcoin_gu_IN.ts \
-  locale/bitcoin_he.ts \
-  locale/bitcoin_hi_IN.ts \
-  locale/bitcoin_hr.ts \
-  locale/bitcoin_hu.ts \
-  locale/bitcoin_id_ID.ts \
-  locale/bitcoin_it.ts \
-  locale/bitcoin_ja.ts \
-  locale/bitcoin_kk_KZ.ts \
-  locale/bitcoin_ko_KR.ts \
-  locale/bitcoin_la.ts \
-  locale/bitcoin_lt.ts \
-  locale/bitcoin_lv_LV.ts \
-  locale/bitcoin_ms_MY.ts \
-  locale/bitcoin_nb.ts \
-  locale/bitcoin_nl.ts \
-  locale/bitcoin_pl.ts \
-  locale/bitcoin_pt_BR.ts \
-  locale/bitcoin_pt_PT.ts \
-  locale/bitcoin_ro_RO.ts \
-  locale/bitcoin_ru.ts \
-  locale/bitcoin_sk.ts \
-  locale/bitcoin_sl_SI.ts \
-  locale/bitcoin_sq.ts \
-  locale/bitcoin_sr.ts \
-  locale/bitcoin_sv.ts \
-  locale/bitcoin_th_TH.ts \
-  locale/bitcoin_tr.ts \
-  locale/bitcoin_uk.ts \
-  locale/bitcoin_vi.ts \
-  locale/bitcoin_vi_VN.ts \
-  locale/bitcoin_zh_CN.ts \
-  locale/bitcoin_zh_TW.ts
+# snorcoin qt core #
+QT_TS = locale/snorcoin_ach.ts \
+  locale/snorcoin_af_ZA.ts \
+  locale/snorcoin_ar.ts \
+  locale/snorcoin_be_BY.ts \
+  locale/snorcoin_bg.ts \
+  locale/snorcoin_bs.ts \
+  locale/snorcoin_ca_ES.ts \
+  locale/snorcoin_ca.ts \
+  locale/snorcoin_cs.ts \
+  locale/snorcoin_cy.ts \
+  locale/snorcoin_da.ts \
+  locale/snorcoin_de.ts \
+  locale/snorcoin_de_AT.ts \
+  locale/snorcoin_el_GR.ts \
+  locale/snorcoin_en.ts \
+  locale/snorcoin_eo.ts \
+  locale/snorcoin_es_CL.ts \
+  locale/snorcoin_es.ts \
+  locale/snorcoin_et.ts \
+  locale/snorcoin_eu_ES.ts \
+  locale/snorcoin_fa_IR.ts \
+  locale/snorcoin_fa.ts \
+  locale/snorcoin_fi.ts \
+  locale/snorcoin_fr_CA.ts \
+  locale/snorcoin_fr.ts \
+  locale/snorcoin_gl.ts \
+  locale/snorcoin_gu_IN.ts \
+  locale/snorcoin_he.ts \
+  locale/snorcoin_hi_IN.ts \
+  locale/snorcoin_hr.ts \
+  locale/snorcoin_hu.ts \
+  locale/snorcoin_id_ID.ts \
+  locale/snorcoin_it.ts \
+  locale/snorcoin_ja.ts \
+  locale/snorcoin_kk_KZ.ts \
+  locale/snorcoin_ko_KR.ts \
+  locale/snorcoin_la.ts \
+  locale/snorcoin_lt.ts \
+  locale/snorcoin_lv_LV.ts \
+  locale/snorcoin_ms_MY.ts \
+  locale/snorcoin_nb.ts \
+  locale/snorcoin_nl.ts \
+  locale/snorcoin_pl.ts \
+  locale/snorcoin_pt_BR.ts \
+  locale/snorcoin_pt_PT.ts \
+  locale/snorcoin_ro_RO.ts \
+  locale/snorcoin_ru.ts \
+  locale/snorcoin_sk.ts \
+  locale/snorcoin_sl_SI.ts \
+  locale/snorcoin_sq.ts \
+  locale/snorcoin_sr.ts \
+  locale/snorcoin_sv.ts \
+  locale/snorcoin_th_TH.ts \
+  locale/snorcoin_tr.ts \
+  locale/snorcoin_uk.ts \
+  locale/snorcoin_vi.ts \
+  locale/snorcoin_vi_VN.ts \
+  locale/snorcoin_zh_CN.ts \
+  locale/snorcoin_zh_TW.ts
 
 QT_FORMS_UI = forms/aboutdialog.ui forms/addressbookpage.ui \
   forms/askpassphrasedialog.ui \
@@ -84,8 +84,8 @@ QT_FORMS_UI = forms/aboutdialog.ui forms/addressbookpage.ui \
 
 QT_MOC_CPP = moc_aboutdialog.cpp moc_addressbookpage.cpp \
   moc_addresstablemodel.cpp moc_askpassphrasedialog.cpp \
-  moc_bitcoinaddressvalidator.cpp moc_bitcoinamountfield.cpp \
-  moc_bitcoingui.cpp moc_bitcoinunits.cpp moc_clientmodel.cpp \
+  moc_snorcoinaddressvalidator.cpp moc_snorcoinamountfield.cpp \
+  moc_snorcoingui.cpp moc_snorcoinunits.cpp moc_clientmodel.cpp \
   moc_coincontroldialog.cpp \
   moc_coincontroltreewidget.cpp \
   moc_csvmodelwriter.cpp moc_editaddressdialog.cpp moc_guiutil.cpp \
@@ -103,20 +103,20 @@ QT_MOC_CPP = moc_aboutdialog.cpp moc_addressbookpage.cpp \
   moc_transactiontablemodel.cpp moc_transactionview.cpp moc_walletframe.cpp \
   moc_walletmodel.cpp moc_walletview.cpp
 
-BITCOIN_MM = macdockiconhandler.mm macnotificationhandler.mm
+SNORCOIN_MM = macdockiconhandler.mm macnotificationhandler.mm
 
 QT_MOC = intro.moc overviewpage.moc rpcconsole.moc
 
-QT_QRC_CPP = qrc_bitcoin.cpp
-QT_QRC = bitcoin.qrc
+QT_QRC_CPP = qrc_snorcoin.cpp
+QT_QRC = snorcoin.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
 PROTOBUF_PROTO = paymentrequest.proto
 
-BITCOIN_QT_H  = aboutdialog.h addressbookpage.h addresstablemodel.h \
-  askpassphrasedialog.h bitcoinaddressvalidator.h bitcoinamountfield.h \
-  bitcoingui.h bitcoinunits.h clientmodel.h coincontroldialog.h coincontroltreewidget.h csvmodelwriter.h \
+SNORCOIN_QT_H  = aboutdialog.h addressbookpage.h addresstablemodel.h \
+  askpassphrasedialog.h snorcoinaddressvalidator.h snorcoinamountfield.h \
+  snorcoingui.h snorcoinunits.h clientmodel.h coincontroldialog.h coincontroltreewidget.h csvmodelwriter.h \
   editaddressdialog.h guiconstants.h guiutil.h intro.h macdockiconhandler.h \
   macnotificationhandler.h monitoreddatamapper.h notificator.h \
   openuridialog.h \
@@ -130,7 +130,7 @@ BITCOIN_QT_H  = aboutdialog.h addressbookpage.h addresstablemodel.h \
   transactionrecord.h transactiontablemodel.h transactionview.h walletframe.h \
   walletmodel.h walletmodeltransaction.h walletview.h
 
-RES_ICONS = res/icons/bitcoin.png res/icons/address-book.png \
+RES_ICONS = res/icons/snorcoin.png res/icons/address-book.png \
   res/icons/quit.png res/icons/send.png res/icons/toolbar.png \
   res/icons/connect0_16.png res/icons/connect1_16.png \
   res/icons/connect2_16.png res/icons/connect3_16.png \
@@ -138,19 +138,19 @@ RES_ICONS = res/icons/bitcoin.png res/icons/address-book.png \
   res/icons/transaction2.png res/icons/clock1.png res/icons/clock2.png \
   res/icons/clock3.png res/icons/clock4.png res/icons/clock5.png \
   res/icons/configure.png res/icons/receive.png res/icons/editpaste.png \
-  res/icons/editcopy.png res/icons/add.png res/icons/bitcoin_testnet.png \
+  res/icons/editcopy.png res/icons/add.png res/icons/snorcoin_testnet.png \
   res/icons/toolbar_testnet.png res/icons/edit.png res/icons/history.png \
   res/icons/overview.png res/icons/export.png res/icons/synced.png \
   res/icons/remove.png res/icons/tx_mined.png res/icons/tx_input.png \
   res/icons/tx_output.png res/icons/tx_inout.png res/icons/lock_closed.png \
   res/icons/lock_open.png res/icons/key.png res/icons/filesave.png \
-  res/icons/qrcode.png res/icons/debugwindow.png res/icons/bitcoin.ico \
-  res/icons/bitcoin_testnet.ico
+  res/icons/qrcode.png res/icons/debugwindow.png res/icons/snorcoin.ico \
+  res/icons/snorcoin_testnet.ico
 
-BITCOIN_QT_CPP = aboutdialog.cpp addressbookpage.cpp \
-  addresstablemodel.cpp askpassphrasedialog.cpp bitcoinaddressvalidator.cpp \
-  bitcoinamountfield.cpp bitcoin.cpp bitcoingui.cpp \
-  bitcoinunits.cpp clientmodel.cpp \
+SNORCOIN_QT_CPP = aboutdialog.cpp addressbookpage.cpp \
+  addresstablemodel.cpp askpassphrasedialog.cpp snorcoinaddressvalidator.cpp \
+  snorcoinamountfield.cpp snorcoin.cpp snorcoingui.cpp \
+  snorcoinunits.cpp clientmodel.cpp \
   coincontroldialog.cpp \
   coincontroltreewidget.cpp \
   csvmodelwriter.cpp editaddressdialog.cpp \
@@ -171,17 +171,17 @@ RES_IMAGES = res/images/about.png res/images/splash.png \
 
 RES_MOVIES = res/movies/update_spinner.mng
 
-BITCOIN_RC = res/bitcoin-qt-res.rc
+SNORCOIN_RC = res/snorcoin-qt-res.rc
 
-libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libsnorcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libsnorcoinqt_a_SOURCES = $(SNORCOIN_QT_CPP) $(SNORCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 
-nodist_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libsnorcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libbitcoinqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libsnorcoinqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -189,18 +189,18 @@ $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
 if TARGET_DARWIN
-  libbitcoinqt_a_SOURCES += $(BITCOIN_MM)
+  libsnorcoinqt_a_SOURCES += $(SNORCOIN_MM)
 endif
 if TARGET_WINDOWS
-  libbitcoinqt_a_SOURCES += $(BITCOIN_RC)
+  libsnorcoinqt_a_SOURCES += $(SNORCOIN_RC)
 endif
 #
 
-# bitcoin-qt binary #
-bitcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# snorcoin-qt binary #
+snorcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-bitcoin_qt_SOURCES = bitcoin.cpp
-bitcoin_qt_LDADD = libbitcoinqt.a $(LIBBITCOIN_SERVER) $(LIBBITCOIN_WALLET) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+snorcoin_qt_SOURCES = snorcoin.cpp
+snorcoin_qt_LDADD = libsnorcoinqt.a $(LIBSNORCOIN_SERVER) $(LIBSNORCOIN_WALLET) $(LIBSNORCOIN_CLI) $(LIBSNORCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
 
 # forms/foo.h -> forms/ui_foo.h
@@ -212,15 +212,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-bitcoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/bitcoinstrings.cpp
+snorcoinstrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/snorcoinstrings.cpp
 
-translate: bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: snorcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(SNORCOIN_QT_CPP) $(SNORCOIN_QT_H) $(SNORCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@$(LUPDATE) $^ -locations relative -no-obsolete -ts locale/bitcoin_en.ts
+	@$(LUPDATE) $^ -locations relative -no-obsolete -ts locale/snorcoin_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && $(RCC) -name bitcoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && $(RCC) -name snorcoin -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -i.bak -e '/^\*\*.*Created:/d' $@ && rm $@.bak
 	$(SED) -i.bak -e '/^\*\*.*by:/d' $@ && rm $@.bak

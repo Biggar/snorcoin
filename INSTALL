@@ -1,5 +1,5 @@
-Building Bitcoin
+Building Snorcoin
 
-See doc/build-*.md for instructions on building bitcoind,
+See doc/build-*.md for instructions on building snorcoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of Bitcoin.
+implementation of Snorcoin.

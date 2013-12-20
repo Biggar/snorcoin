@@ -1,8 +1,8 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "bitcoingui.h"
+#include "snorcoingui.h"
 
 #include "clientmodel.h"
 #include "guiconstants.h"
@@ -34,8 +34,8 @@
 #include <QTextCodec>
 #endif
 
-#if defined(BITCOIN_NEED_QT_PLUGINS) && !defined(_BITCOIN_QT_PLUGINS_INCLUDED)
-#define _BITCOIN_QT_PLUGINS_INCLUDED
+#if defined(SNORCOIN_NEED_QT_PLUGINS) && !defined(_SNORCOIN_QT_PLUGINS_INCLUDED)
+#define _SNORCOIN_QT_PLUGINS_INCLUDED
 #define __INSURE__
 #include <QtPlugin>
 Q_IMPORT_PLUGIN(qcncodecs)
@@ -49,7 +49,7 @@ Q_IMPORT_PLUGIN(qtaccessiblewidgets)
 Q_DECLARE_METATYPE(bool*)
 
 // Need a global reference for the notifications to find the GUI
-static BitcoinGUI *guiref;
+static SnorcoinGUI *guiref;
 static SplashScreen *splashref;
 
 static bool ThreadSafeMessageBox(const std::string& message, const std::string& caption, unsigned int style)
@@ -90,7 +90,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("bitcoin-core", psz).toStdString();
+    return QCoreApplication::translate("snorcoin-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.
@@ -98,7 +98,7 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Bitcoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", SnorcoinGUI::tr("A fatal error occurred. Snorcoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
@@ -133,11 +133,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. bitcoin_de.qm (shortcut "de" needs to be defined in bitcoin.qrc)
+    // Load e.g. snorcoin_de.qm (shortcut "de" needs to be defined in snorcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. bitcoin_de_DE.qm (shortcut "de_DE" needs to be defined in bitcoin.qrc)
+    // Load e.g. snorcoin_de_DE.qm (shortcut "de_DE" needs to be defined in snorcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -158,7 +158,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-#ifndef BITCOIN_QT_TEST
+#ifndef SNORCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
     bool fMissingDatadir = false;
@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
 
     // Command-line options take precedence:
     ParseParameters(argc, argv);
-    // ... then bitcoin.conf:
+    // ... then snorcoin.conf:
     if (!boost::filesystem::is_directory(GetDataDir(false))) {
         fMissingDatadir = true;
     } else {
@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(bitcoin);
+    Q_INIT_RESOURCE(snorcoin);
     QApplication app(argc, argv);
 #if QT_VERSION > 0x050100
     // Generate high-dpi pixmaps
@@ -199,12 +199,12 @@ int main(int argc, char *argv[])
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
     bool isaTestNet = TestNet() || RegTest();
-    QApplication::setOrganizationName("Bitcoin");
-    QApplication::setOrganizationDomain("bitcoin.org");
+    QApplication::setOrganizationName("Snorcoin");
+    QApplication::setOrganizationDomain("snorcoin.org");
     if (isaTestNet) // Separate UI settings for testnets
-        QApplication::setApplicationName("Bitcoin-Qt-testnet");
+        QApplication::setApplicationName("Snorcoin-Qt-testnet");
     else
-        QApplication::setApplicationName("Bitcoin-Qt");
+        QApplication::setApplicationName("Snorcoin-Qt");
 
     // Now that QSettings are accessible, initialize translations
     QTranslator qtTranslatorBase, qtTranslator, translatorBase, translator;
@@ -218,17 +218,17 @@ int main(int argc, char *argv[])
 
     // Now that translations are initialized check for errors and allow a translatable error message
     if (fMissingDatadir) {
-        QMessageBox::critical(0, QObject::tr("Bitcoin"),
+        QMessageBox::critical(0, QObject::tr("Snorcoin"),
                               QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
     else if (fSelParFromCLFailed) {
-        QMessageBox::critical(0, QObject::tr("Bitcoin"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
+        QMessageBox::critical(0, QObject::tr("Snorcoin"), QObject::tr("Error: Invalid combination of -regtest and -testnet."));
         return 1;
     }
 
     // Start up the payment server early, too, so impatient users that click on
-    // bitcoin: links repeatedly have their payment requests routed to this process:
+    // snorcoin: links repeatedly have their payment requests routed to this process:
     PaymentServer* paymentServer = new PaymentServer(&app);
 
     // User language is set up: pick a data directory
@@ -282,7 +282,7 @@ int main(int argc, char *argv[])
 
         boost::thread_group threadGroup;
 
-        BitcoinGUI window(isaTestNet, 0);
+        SnorcoinGUI window(isaTestNet, 0);
         guiref = &window;
 
         QTimer* pollShutdownTimer = new QTimer(guiref);
@@ -327,7 +327,7 @@ int main(int argc, char *argv[])
                 }
 
                 // Now that initialization/startup is done, process any command-line
-                // bitcoin: URIs or payment requests:
+                // snorcoin: URIs or payment requests:
                 QObject::connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                                  &window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
                 QObject::connect(&window, SIGNAL(receivedURI(QString)),
@@ -368,4 +368,4 @@ int main(int argc, char *argv[])
     }
     return 0;
 }
-#endif // BITCOIN_QT_TEST
+#endif // SNORCOIN_QT_TEST

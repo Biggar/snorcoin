@@ -1,6 +1,6 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Bitcoin in Unix. 
+Some notes on how to build Snorcoin in Unix. 
 
 To Build
 ---------------------
@@ -9,7 +9,7 @@ To Build
 	./configure
 	make
 
-This will build bitcoin-qt as well if the dependencies are met.
+This will build snorcoin-qt as well if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -64,7 +64,7 @@ for Ubuntu 12.04 and later:
 
 	sudo apt-get install libboost-all-dev
 
- db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
+ db4.8 packages are available [here](https://launchpad.net/~snorcoin/+archive/snorcoin).
 
  Ubuntu 12.04 and later have packages for libdb5.1-dev and libdb5.1++-dev,
  but using these will break binary wallet compatibility, and is not recommended.
@@ -83,7 +83,7 @@ Optional:
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build Bitcoin-Qt, make sure that the required packages for Qt development
+If you want to build Snorcoin-Qt, make sure that the required packages for Qt development
 are installed. Qt 4 is currently necessary to build the GUI.
 
 To build with Qt 4 you need the following:
@@ -94,12 +94,12 @@ libqrencode (optional) can be installed with:
 
     apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a bitcoin-qt executable will be
+Once these are installed, they will be found by configure and a snorcoin-qt executable will be
 built by default.
 
 Notes
 -----
-The release is built with GCC and then "strip bitcoind" to strip the debug
+The release is built with GCC and then "strip snorcoind" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -131,7 +131,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your bitcoin installation more secure by making certain attacks impossible to
+To help make your snorcoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -155,7 +155,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./bitcoin
+    	scanelf -e ./snorcoin
 
     The output should contain:
      TYPE
@@ -163,13 +163,13 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, bitcoin should be built with a non-executable stack
+    vulnerable buffers are found. By default, snorcoin should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./bitcoin`
+    `scanelf -e ./snorcoin`
 
     the output should contain:
 	STK/REL/PTL
@@ -179,7 +179,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, bitcoin may be compiled in
+When the intention is to run only a P2P node without a wallet, snorcoin may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet

@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build bitcoind(headless client) for OSX.
+This guide will show you how to build snorcoind(headless client) for OSX.
 
 Notes
 -----
@@ -47,14 +47,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `bitcoind`
+### Building `snorcoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:bitcoin/bitcoin.git bitcoin
-        cd bitcoin
+        git clone git@github.com:snorcoin/snorcoin.git snorcoin
+        cd snorcoin
 
-2.  Build bitcoind:
+2.  Build snorcoind:
 
         ./autogen.sh
         ./configure
@@ -83,14 +83,14 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `bitcoind`
+### Building `snorcoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/bitcoin/bitcoin.git
-        cd bitcoin
+        git clone https://github.com/snorcoin/snorcoin.git
+        cd snorcoin
 
-2.  Build bitcoind:
+2.  Build snorcoind:
 
         ./autogen.sh
         ./configure
@@ -103,10 +103,10 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A bitcoind binary is not included in the Bitcoin-Qt.app bundle. You can ignore
-this section if you are building `bitcoind` for your own use.
+A snorcoind binary is not included in the Snorcoin-Qt.app bundle. You can ignore
+this section if you are building `snorcoind` for your own use.
 
-If you are building `bitcoind` for others, your build machine should be set up
+If you are building `snorcoind` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -122,33 +122,33 @@ For MacPorts, that means editing your macports.conf and setting
 ... and then uninstalling and re-installing, or simply rebuilding, all ports.
 
 As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
-Download `http://gavinandresen-bitcoin.s3.amazonaws.com/boost_macports_fix.zip`
+Download `http://gavinandresen-snorcoin.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of Bitcoin-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of Snorcoin-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `Bitcoin-Qt.app` is easy:
+Once dependencies are compiled, creating `Snorcoin-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
 Running
 -------
 
-It's now available at `./bitcoind`, provided that you are still in the `src`
+It's now available at `./snorcoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./bitcoind` to get the filename where it should be put, or just try these
+Run `./snorcoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=bitcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
+    echo -e "rpcuser=snorcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Snorcoin/snorcoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Snorcoin/snorcoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./bitcoind --help  # for a list of command-line options.
-    ./bitcoind -daemon # to start the bitcoin daemon.
-    ./bitcoind help    # When the daemon is running, to get a list of RPC commands
+    ./snorcoind --help  # for a list of command-line options.
+    ./snorcoind -daemon # to start the snorcoin daemon.
+    ./snorcoind help    # When the daemon is running, to get a list of RPC commands

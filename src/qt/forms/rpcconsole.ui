@@ -328,7 +328,7 @@
        <item row="15" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the Snorcoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -354,7 +354,7 @@
        <item row="17" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the Bitcoin-Core help message to get a list with possible Bitcoin command-line options.</string>
+          <string>Show the Snorcoin-Core help message to get a list with possible Snorcoin command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>
@@ -436,7 +436,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../bitcoin.qrc">
+            <iconset resource="../snorcoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -717,7 +717,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../bitcoin.qrc"/>
+  <include location="../snorcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

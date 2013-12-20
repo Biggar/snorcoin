@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +19,7 @@ struct RecentRequestEntry
     SendCoinsRecipient recipient;
 };
 
-/** Model for list of recently generated payment requests / bitcoin URIs.
+/** Model for list of recently generated payment requests / snorcoin URIs.
  * Part of wallet model.
  */
 class RecentRequestsTableModel: public QAbstractTableModel

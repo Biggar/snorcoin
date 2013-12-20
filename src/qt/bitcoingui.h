@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Snorcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOINGUI_H
-#define BITCOINGUI_H
+#ifndef SNORCOINGUI_H
+#define SNORCOINGUI_H
 
 #include <QMainWindow>
 #include <QMap>
@@ -25,18 +25,18 @@ class QProgressBar;
 QT_END_NAMESPACE
 
 /**
-  Bitcoin GUI main class. This class represents the main window of the Bitcoin UI. It communicates with both the client and
+  Snorcoin GUI main class. This class represents the main window of the Snorcoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class BitcoinGUI : public QMainWindow
+class SnorcoinGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const QString DEFAULT_WALLET;
 
-    explicit BitcoinGUI(bool fIsTestnet = false, QWidget *parent = 0);
-    ~BitcoinGUI();
+    explicit SnorcoinGUI(bool fIsTestnet = false, QWidget *parent = 0);
+    ~SnorcoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -44,7 +44,7 @@ public:
     void setClientModel(ClientModel *clientModel);
 
     /** Set the wallet model.
-        The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a snorcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);
@@ -175,4 +175,4 @@ private slots:
     void detectShutdown();
 };
 
-#endif // BITCOINGUI_H
+#endif // SNORCOINGUI_H
